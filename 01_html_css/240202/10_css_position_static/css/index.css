@@ -1,0 +1,22 @@
+.box1{
+    float: right;
+    position: static; 
+    /* static: 기본값 */
+    /* top: 30px; position: static에서는 이용 불가 */
+    width: 100px;
+    padding: 20px;
+    margin-right: 10px;
+    background-color:lemonchiffon;
+}
+
+
+.box2{
+    float: left;
+    width: 300px;
+    padding: 20px;
+    background-color:lightblue;
+}
+
+.lorem{
+    float: none;
+}

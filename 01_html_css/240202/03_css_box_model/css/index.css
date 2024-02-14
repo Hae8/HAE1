@@ -1,0 +1,73 @@
+.container {
+    border: 1px solid black;
+    /*width: fit-content*/
+    margin: 20px 10px;
+}
+
+.container2 {
+    border: 1px solid black;
+    width: 400;
+    display: inline;
+}
+
+#userText {
+    margin: 50px;
+    border: 10px solid aliceblue;
+    padding: 20px;
+}
+
+#mother{
+    background-color: lightgray;
+    width: 1200px;
+    height: 200px;
+}
+
+#child{
+    background-color: lemonchiffon;
+    width: 10%;
+    height: 10%;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#inline li{
+    display: inline;
+    background-color: aliceblue;
+    /* inline 요소에서 width, text-align, line-height는 의미 없음
+    width: 100px;
+    text-align: center;
+    line-height: 2.5;*/
+}
+
+#inlineBlock li {
+    display: inline-block;
+    background-color: aliceblue;
+    width: 100px;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.blue-box {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    margin: 20px 0;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}

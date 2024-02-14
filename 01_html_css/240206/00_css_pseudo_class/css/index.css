@@ -1,0 +1,76 @@
+ul{
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+li{
+    display: inline-block;
+}
+
+li > a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: cornflowerblue;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px black;
+    margin-right: 8px;
+}
+
+.song:target{
+    background-color: black;
+    color: #fff;
+    font-weight: 400;
+}
+
+#wrapper > *:not(h1, h2){
+    font-style: italic;
+}
+
+#wrapper > h1:only-child::after{
+    content: "->준비된 음악이 없습니다."
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+#wrapper{
+    display: inline-block;
+    border: 1px solid #818181;
+    border-radius: 10px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+p{
+    padding: 0 20px;
+}
+
+/*
+p:nth-child(5) {
+    font-weight: bold;
+}
+
+p:nth-of-type(3) {
+    color: cornflowerblue;
+}
+
+p:last-child{
+    text-decoration: underline;
+}
+
+p:last-of-type{
+    font-style: italic;
+}
+*/
+
+/* 연속하는 두 항의 차이(공차)가 모두 일정한 수열 */
+p:nth-of-type(2n-1){
+    font-weight: bold;
+}

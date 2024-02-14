@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>테이블 태그</title>
+    <style>
+        table{
+            border:1px solid blue;
+            border-collapse: collapse;
+        }
+        th, td{
+            border:1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table> <!--행부터 채우기 시작해서 열로 내려간다-->
+        <!--tbody를 적지 않아도 자동으로 생겨난다. table이 부모가 아닌, 자동으로 생겨난 tbody가 부모가 된다.-->
+        <tr>
+            <td>열1</td>
+            <td>열2</td>
+            <td>열3</td>
+        </tr>
+        <tr>
+            <td>열4</td>
+            <td>열5</td>
+            <td>열6</td>
+        </tr>
+        <tr>
+            <td>열7</td>
+            <td>열8</td>
+            <td>열9</td>
+        </tr>
+    </table>
+
+<br/>
+
+    <table>
+        <!--thead는 표의 헤더 부분을 의미한다. 생략 가능하다.-->
+        <thead>
+            <tr> <!--tr은 행을 의미한다.-->
+                <th>제목 셀1</th> <!--th는 제목 셀을 의미한다.(굵게 표시되는 효과)-->
+                <th>제목 셀2</th>
+            </tr>
+        </thead>
+
+        <!--tbody는 표의 본문 부분을 의미한다. 생략 가능하지만!!! 자동 생성된다.-->
+        <!--tbody를 적지 않아도 자동으로 생겨난다. table이 부모가 아닌, 자동으로 생겨난 tbody가 부모가 된다.-->
+        <tbody>
+            <td>본문내용 셀1</td> <!--td는 내용 셀을 의미한다.-->
+            <td>본문내용 셀2</td>
+        </tbody>
+
+        <!--tfoot은 표의 요약 부분을 의미한다. 생략 가능하다.-->
+        <tfoot>
+            <td>요약 셀1</td>
+            <td>요약 셀2</td>
+        </tfoot>
+    </table>
+
+<br/>
+
+<table>
+    <!--caption은 표의 제목을 의미한다. 생략 가능하다.-->
+    <caption>표 캡션</caption>
+    <!--colgroup은 표의 열을 의미한다. 생략 가능하다.-->
+    <colgroup>
+        <!--col은 열의 너비를 설정한다. 생략 가능하다.-->
+        <!--HTML5에서 더이상 지원하지 않는 기능-->
+        <col style="width:30%"/>
+        <col style="width:70%"/>
+    </colgroup>
+
+    <tbody>
+        <tr>
+            <td>본문내용 셀1</td>
+            <td>본문내용 셀2</td>
+        </tr>
+        <tr>
+            <td colspan="2">본문내용 셀3</td>
+        </tr>
+        <tr>
+            <td>본문내용 셀4</td>
+            <td rowspan="2">본문내용 셀5</td>
+        </tr>
+        <tr>
+        <td>본문내용 셀6</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

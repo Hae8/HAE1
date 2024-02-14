@@ -1,0 +1,36 @@
+.container{
+    border: 1px solid black;
+    margin: 30px;
+}
+
+.box1{
+    width: 100px;
+    padding: 20px;
+    margin-right: 10px;
+    background-color:lemonchiffon;
+}
+
+
+.box2{
+    width: 300px;
+    padding: 20px;
+    background-color:lightblue;
+}
+
+.relative .box1{
+    position: relative;
+    top: 30px;
+    left: 100px;
+}
+
+.relative .box2{
+    position: relative;
+    top: 30px;
+    left: 100px;
+}
+
+.absolute .box1{
+    position: a;
+    top: 30px;
+    left: 100px;
+}

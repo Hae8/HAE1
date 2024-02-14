@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* -------------------------------------------------------------- */
+
+body header {
+    grid-area: header;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 40vw 1fr;
+    grid-template-areas:
+        "menu logo login";
+    box-shadow: 1px 1px 5px gray;
+    background-color: white;
+
+    ul {
+        margin: 10px 0;
+        list-style: none;
+        display: flex;
+
+        li a {
+            text-decoration: none;
+            color: gray;
+            font-size: small;
+            margin: auto 12px;
+        }
+    }
+}
+
+.menu{
+    grid-area:menu;
+    justify-content: flex-start;
+}
+.logo{
+    grid-area:logo;
+    justify-content: center;
+    margin: 0 auto;
+}
+.login{
+    grid-area:login;
+    justify-content:flex-end;
+}
+
+/* -------------------------------------------------------------- */
+
+main{
+    grid-area: main;
+}
+
+caption{
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 40px;
+}
+
+table{
+    margin:40px auto;
+    border-top: solid black;
+    border-left: solid white;
+    border-right: solid white;
+    border-bottom: solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px dotted;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+th{
+    background-color: gainsboro;
+    text-align: right;
+    width: 20vw;
+}
+
+.req::before{
+    content: "*";
+    color: red;
+    margin-right: 4px;
+}
+
+td{
+    width: 60vw;
+}
+
+button{
+    margin-left: 4px;
+    padding: 0px 8px;
+    background-color: black;
+    box-shadow: 0 1px 3px black;
+    color: white;
+}
+button:active{
+    box-shadow: 0 1px 3px white inset;
+}
+
+tfoot button{
+    background-color: white;
+    color: black;
+}
+tfoot button:active{
+    box-shadow: 0 1px 3px black inset;
+}
+
+div.info {
+    margin: 8px 0px;
+    font-size: small;
+
+    span {
+        color: red;
+    }
+}
+
+tfoot div {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+
+    button {
+        margin: 0 10px;
+        width: 100px;
+    }
+}
+
+/* -------------------------------------------------------------- */
+
+footer {
+    padding: 20px 80px;
+    font-size: small;
+    grid-area: footer;
+    background-color: rgb(90, 90, 90);
+    color: #fff;
+
+    div {
+        margin: 16px 0px;
+    }
+}

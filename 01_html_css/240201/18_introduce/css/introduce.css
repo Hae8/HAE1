@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: "Cafe24Ssurround";
+    font-size: 1.1em;
+    }
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul,ol{color: lightcoral;
+    list-style-position: inside;
+}
+#heart{
+    list-style-type: circle;
+}
+#star{
+    list-style-type:upper-roman;
+}
+#friend{
+    list-style-type: upper-alpha
+}
+
+tr>td>a{
+    text-decoration: none;
+    color:pink
+}
+
+h1{
+    color: indianred;
+    margin: 8px;
+    font-size: 3em;
+}
+h2{
+    background-color: lightcoral;
+    color:#ffffff;
+    margin: 8px;
+    padding: 2px;
+    font-size: 2em;
+}
+h3 {
+    background-color: pink;
+    color:#ffffff;
+    margin: 8px;
+    padding: 2px;
+    font-size: 2em;
+}
+
+table{
+    border:1px solid pink;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td{
+    padding:5px
+}
+th{
+    border:1px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+    background-color: pink
+}
+td{
+    border:1px solid pink;
+    text-align: center;
+    color: lightcoral;
+}

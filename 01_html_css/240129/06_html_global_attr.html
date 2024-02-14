@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 전역(글로벌) 속성</title>
+    <style>
+        p{
+            font-size: 24px;
+            color:grey
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        #summary{
+            color:coral;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let input = document.querySelector('#use_data');
+            console.log(input.dataset.today);
+            console.log(input.dataset.subject);
+        }
+</script>
+</head>
+<body>
+    <h1 title="title, style, class, id, data-*" 
+        style="font-size: 16px; color:rgb(129, 84, 202)">
+        HTML 전역(글로벌) 속성
+</h1> <!--h1 태그는 단 하나만을 사용해야 한다.-->
+<p id="summary">글로벌 속성은 모든 HTML 요소에 공통으로 사용할 수 있는 속성을 말한다.</p> <!--Id는 식별자로서 그룹안에 반드시 하나만 존재해야 한다.-->
+<p class="bold">title 속성은 요소에 대한 추가 정보(마우스 툴팁)을 제공한다.</p>
+<p class="bold italic">style 속성은 요소에 적용할 CSS 스타일을 지정한다.</p>
+<hr> <!--horizontal rule-->
+<p class="italic">class 속성은 요소를 식별하는 이름(중복가능)을 지정한다.</p>
+<p class="italic">id 속성은 요소를 식별하는 유일한 고유 식별자를 지정한다.</p>
+<p id="use_data" class="italic" data-today="2024-01-29" data-subject="HTML">
+    data-* 속성은 사용자 지정 데이터 속성을 지정한다.</p>
+
+</body>
+</html>

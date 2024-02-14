@@ -1,0 +1,20 @@
+.container{
+    width: 100px;
+    height: 100px;
+    background-color: lavenderblush;
+}
+
+/* 마진 중첩 현상: 마진과 마진이 위 아래로 만날 경우, 큰 마진에 자동으로 맞춰진다. */
+.margin{
+    margin: 20px;
+    display: inline-block;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+/* 마진과 패딩은 다르다! */
+.padding{
+    padding: 20px;
+}

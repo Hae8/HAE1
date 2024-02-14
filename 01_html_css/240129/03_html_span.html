@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 요소</title>
+</head>
+<body>
+    <h1 style="width: 150px; background-color:yellow">인라인 요소는 수평으로 쌓인다.</h1>
+    <!--span은 너비와 높이를 변경해도 크기에 변화를 가져오지 않는다.-->
+    <span style="width:150px; background-color:red">Hello</span>
+    <span style="height:200px; background-color:blue">World</span>
+    <br/>
+    <!--margin은 각각의 요소 외부 사이 거리두기, padding은 요소 내부 거리 둘러싸기-->
+    <span style="margin:5px 15px; background-color:red">Hello</span>
+    <span style="padding:10px 20px 30px 40px; background-color:blue">World</span> <!--2개일 때 상하, 좌우, 3개일 때 상, 좌우, 하, 4개일 때 시계방향으로 상 우 하 좌 순서-->
+    <!--중요! 인라인 요소 안에 블록 요소가 들어올 수 없다!-->
+</body>
+</html>

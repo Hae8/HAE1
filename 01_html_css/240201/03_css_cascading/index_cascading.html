@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어떤 스타일이 적용될까요?</title>
+    <link rel="stylesheet" href=".//css/index.css">
+    <style>
+        h1{
+            color: orange !important;
+        }
+
+        p{
+            background-color: orange;
+        }
+    </style>
+    <!-- !important는 최후의 보루로 사용하자 -->
+    <!-- 스타일 우선 중요 순위: 사용자 스타일 시트 (글꼴 등), 제작자 스타일 시트의 중요 스타일, 제작자 스타일 시트의 일반 스타일, user agent sheet(브라우저 기본 제공) -->
+    <!-- 스타일 우선 한정 순위: !important, 인라인 스타일, id 스타일, 클래스 스타일, 태그 스타일 -->
+    <!-- 부모 요소의 스타일이 자식에게로 상속되지만, 모든 요소가 상속되는 것은 아님(background-color 등) -->
+</head>
+<body>
+    <h1 style="color:darkturquoise;">cascading의 의미를 생각해보자</h1>
+    <p style="background-color: darkturquoise;">실습으로 확인해보기</p>
+</body>
+</html>

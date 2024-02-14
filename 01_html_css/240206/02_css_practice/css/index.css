@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* -------------------------------------------------------------- */
+
+body header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "menu logo login";
+}
+
+body header ul{
+    margin:10px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+body header ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size:small;
+}
+
+.menu{
+    grid-area:menu;
+}
+.logo{
+    grid-area:logo;
+}
+.login{
+    grid-area:login;
+}
+
+/* -------------------------------------------------------------- */
+
+main form{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas:
+    ". template template template"
+    ". title user ."
+    "button button button button";
+}
+
+#template{
+    grid-area: template;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.title{
+    grid-area: title;
+    background-color: lightgreen;
+}
+
+.user{
+    grid-area: user;
+    background-color: lightblue;
+}
+
+.button{
+    grid-area: button;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------------- */
+
+footer{
+    grid-area: footer;
+}

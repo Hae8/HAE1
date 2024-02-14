@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공백 처리 방법 지정</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <h1>white-space</h1>
+    <p id="ws-normal">
+        white-space 속성에 normal을 지정하면,
+        공백과    줄바꿈을    무시하고 한 줄로 표시됩니다.
+        단, 브라우저 너비 범위를 벗어나면 줄바꿈을 합니다.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate consectetur itaque delectus alias asperiores corrupti deserunt eligendi, nobis rerum, ipsum suscipit beatae repellat tenetur minima, harum ipsam? Aliquid, quibusdam! Consequuntur!
+    </p>
+
+    <p id="ws-nowrap">
+        white-space 속성에 nowrap을 지정하면,
+        공백과    줄바꿈을    무시하고 한 줄로 표시됩니다.
+        게다가, 브라우저 너비를 벗어나도 줄바꿈을 하지 않습니다.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic minus molestias tenetur earum nesciunt, quod asperiores fuga illum, at labore debitis sapiente sequi totam vero culpa dolore consectetur quis?
+    </p>
+
+    <p id="ws-pre">
+        white-space 속성에 pre를 지정하면,
+        공백과    줄바꿈을    모두 유지한 채 표시됩니다.
+        게다가, 브라우저 너비를 벗어나도 줄바꿈을 하지 않습니다.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolor expedita maxime consectetur earum, eaque nam sint. Delectus facilis repudiandae ab doloribus? Debitis repellat, architecto ad molestiae qui quibusdam optio.
+    </p>
+
+    <p id="ws-pre-line">
+        white-space 속성에 pre-line을 지정하면,
+        공백은    무시하고, 줄바꿈은 유지한 채 표시됩니다.
+        또한, 브라우저 너비 범위를 벗어나면 줄바꿈을 합니다.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo impedit vero commodi culpa! Qui aperiam aut soluta? Eius cum odit quo nisi perspiciatis enim nostrum architecto voluptatum? Nam, ducimus quos.
+    </p>
+
+    <p id="ws-pre-wrap">
+        white-space 속성에 pre-wrap을 지정하면,
+        공백과    줄바꿈을    모두 유지한 채 표시됩니다.
+        또한, 브라우저 너비 범위를 벗어나면 줄바꿈을 합니다.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo impedit vero commodi culpa! Qui aperiam aut soluta? Eius cum odit quo nisi perspiciatis enim nostrum architecto voluptatum? Nam, ducimus quos.
+    </p>
+</body>
+</html>

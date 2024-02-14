@@ -1,0 +1,27 @@
+.box1{
+    float: left;
+
+    position: relative;
+    top: 30px;
+    left: 100px;
+    
+    width: 100px;
+    padding: 20px;
+    margin-right: 10px;
+    background-color:lemonchiffon;
+}
+
+/* static 기준점으로 위치를 변경 가능 */
+
+.box2{
+    float: left;
+    width: 300px;
+    padding: 20px;
+    background-color:lightblue;
+}
+/* box1의 content가 끝나는 곳에 가서 float가 적용 */
+/* float를 넣으면 display 상태가 무시된다. */
+
+.lorem{
+    clear: both;
+}

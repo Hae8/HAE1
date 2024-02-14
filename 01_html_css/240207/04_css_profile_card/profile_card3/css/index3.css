@@ -1,0 +1,163 @@
+:root{
+    --item-count: 3;
+    --item-margin: 2%;
+    --maincolor : #FFBF00;
+    --subcolor1 : #EAA012;
+    --subcolor2 : #959AB4;
+    --pointcolor : #3E434E;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+}
+
+body{
+    background-color: var(--maincolor);
+}
+
+#wrapper{
+    display: flex-inline;
+}
+
+/* --------------------- 헤더 ------------------------- */
+
+header{
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--maincolor);
+}
+
+/* --------------------- 메인 ------------------------- */
+
+main{
+    flex-flow: column nowrap;
+    width: 480px;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+#wrap{
+    justify-content: center;
+    width: 480px;
+    height: fit-content;
+    margin: auto auto;
+    padding:32px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.45);
+    border-radius: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#menu {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style: none;
+        color: var(--subcolor2);
+    }
+}
+
+#profile{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    img{
+        width: 400px;
+        height: 400px;
+        margin: 32px auto;
+        background-color: black;
+        border-radius: 100%;
+        box-shadow:  0px 0px 8px black;
+    }
+    div{
+        margin: 4px 0;
+        color: var(--subcolor2);
+        text-align: center;
+    }
+    #name{
+        font-weight: bold;
+        font-size: xx-large;
+        color: var(--maincolor);
+    }
+    #belong{
+        font-size: medium;
+    }
+    button{
+        margin: 32px auto;
+        padding: 4px 48px;
+        background-color: var(--pointcolor);
+        color: white;
+        border: none;
+        border-radius: 16px;
+    }
+}
+
+button:active{
+    box-shadow:  0px 0px 4px black inset;
+}
+
+#contact {
+    margin-left: 24px;
+    display: flex;
+    flex-flow: column wrap;
+    list-style: none;
+    color: var(--subcolor1);
+    li a{
+        margin-left: 8px;
+        text-decoration: none;
+        color: var(--subcolor2);
+    }
+}
+
+#others {
+    margin-top: 32px;
+
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+            p{
+                width: 36px;
+                height: 36px;
+                margin: 24px 0;
+                border-radius: 100%;
+            }
+            
+        }
+    }
+}
+
+#a{ 
+    background-color: #8C1C03;
+}
+#b{
+    background-color: #385DA6;
+}
+#c{
+    background-color: #FFBF00;
+}
+#d{
+    background-color: #788C30;
+}
+
+p:hover{
+    box-shadow:  0px 0px 8px white inset;
+}
+/* --------------------- 풋터 ------------------------- */
+
+footer{
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--maincolor);
+}

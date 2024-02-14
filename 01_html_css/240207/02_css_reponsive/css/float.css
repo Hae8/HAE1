@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+header{
+    height: 100px;
+    background-color: lavender;
+}
+
+nav{
+    height: 200px;
+    background-color: lavenderblush;
+}
+
+section{
+    background-color: lemonchiffon;
+    overflow: hidden;
+    padding: 2%;
+}
+
+section > div{
+    height: 170px;
+    width: 23%;
+    margin: 1%;
+    background-color: lightcyan;
+    border-radius: 20px;
+    float: left;
+}
+
+footer{
+    height: 100px;
+    background-color: lightgray;
+}
+
+/* 768px - 태블릿 */
+@media (max-width: 768px){
+    section > div{
+        width: 31%;
+    }
+}
+
+/* 425px - 모바일 */
+@media (max-width: 425px){
+    section > div{
+        width: 48%;
+    }
+}

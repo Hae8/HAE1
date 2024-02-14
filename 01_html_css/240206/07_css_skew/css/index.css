@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+section{
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 50px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+
+.box1:hover{
+    transform:skewX(30deg);
+    transition: 1s;
+}
+
+.box2:hover{
+    transform:skewY(30deg);
+    transition: 1s;
+}

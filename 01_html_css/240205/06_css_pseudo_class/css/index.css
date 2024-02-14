@@ -1,0 +1,143 @@
+:root {
+    --color-main: cornflowerblue;
+}
+/* :root : html보다 상위, 최상위 요소 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-rows: 50px 1000px 100px;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    line-height: 50px;
+    list-style: none;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav a{
+    padding: 8px 16px;
+    background-color: white; 
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* 링크를 적절히 디자인 하려면 LVHA 순서를 지켜서 스타일 지정하자 */
+
+nav a:link{
+    color:var(--color-main)
+}
+
+nav a:hover{
+    box-shadow: 1px 1px 6px cadetblue;
+}
+
+nav a:active{
+    box-shadow: 1px 1px 6px cadetblue inset;
+}
+nav a:visited{
+    color: lightblue;
+}
+
+nav a:target{
+    color: gold;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 8fr 2fr;
+    grid-template-areas:
+        "section aside"
+        "summary summary";
+    background-color: lightgray;
+}
+
+section {
+    grid-area: section;
+    background-color: lavender;
+    text-align: center;
+}
+
+input[type="search"] {
+    margin-top: 50px;
+    width: 561px;
+    height: 44px;
+    border: 1px solid #20212447;
+    border-radius: 22px;
+    box-shadow: 0px 1px 6px 0px #20212447 inset;
+    padding: 0px 22px;
+}
+
+input[type="search"]:focus{
+    outline:none;
+    background-color:lavender;
+}
+
+input[type="search"]:disabled{
+    background-color:darkgray;
+}
+
+.box{
+    margin-top: 50px;
+}
+
+.gender_box label{
+    padding: 0 10px
+}
+
+.gender_chk{
+    accent-color: pink;
+}
+
+.gender_chk:checked+span{
+    font-weight: bold;
+}
+
+.box > p:nth-of-type(2n-1){
+    color:salmon
+}
+/*p요소 안에서 2n-1번째인 것 */
+
+.box > p:only-of-type{
+    color:var(--color-main)
+}
+/* 딱 하나만 있는 경우 */
+
+.box > p:nth-child(2n-1){
+    color:var(--color-main)
+}
+/* 요소 중 2n-1번째인 것 */
+
+
+aside {
+    grid-area: aside;
+    background-color: lightyellow;
+}
+
+summary {
+    grid-area: summary;
+    background-color: lavenderblush;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+}

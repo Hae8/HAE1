@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    width: 500px;
+    height: 500px;
+}
+
+.to_blue{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+.to_blue:hover{
+    background-color: cornflowerblue;
+    transition: background-color 5s 2s ease-in;
+    /* transition-property: background-color;
+    transition-duration: 5s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in; */
+}
+
+.to_circle{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border: 2px solid black;
+}
+.to_circle:hover{
+    border: 2px solid red;
+    border-radius: 100%;
+    transition: 1500ms ease-in;
+}

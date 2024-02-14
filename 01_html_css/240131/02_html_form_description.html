@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 태그 설명</title>
+    <style>
+        h2{
+            color:salmon
+        }
+        h3{
+            color:lightsalmon
+        }
+    </style>
+</head>
+<body>
+    <h1>입력양식 태그</h1>
+    <h2>fieldset 태그</h2>
+    <p>입력 양식을 그룹으로 묶어주는 태그(disabled)</p>
+
+    <h2>label 태그</h2>
+    <p>입력 양식의 설명을 만들어주는 태그(for : 입력 양식의 id와 연결)</p>
+
+    <h2>form 태그</h2>
+    <p>form 태그는 입력 양식 폼을 만들어주는 태그입니다.</p>
+    <h3>form 태그의 속성</h3>
+    <ul>
+        <li>action: 입력 데이터를 전송할 서버의 주소 지정 (상대 경로, 절대 경로)</li>
+        <li>method: 입력 데이터를 전송할 방식을 지정 (GET(기본값), POST)</li>
+    </ul>
+
+    <h2>input 태그</h2>
+    <h3>input 태그의 속성</h3>
+    <ul>
+        <li>
+            <h4>type</h4>
+            <p>입력 양식의 종류를 지정(text, password, number, range, color, email, tel, url, search, checkbox, radio, date, time, week, datetime-local, file, hidden, textarea, select, datalist, button, image, submit, reset)</p>
+        </li>
+        <li>
+            <h4>name</h4>
+            <p>입력한 데이터를 전송하기 위해 지정(값에 이름을 붙인다.)</p>
+        </li>
+        <li>
+            <h4>value</h4>
+            <p>입력 양식의 값을 의미하고, 지정하면 기본값으로 설정된다.</p>
+        </li>
+        <li>
+            <h4>placeholder, required, readonly, disabled, ...</h4>
+            <p>입력 양식의 힌트, 필수 여부, 읽기전용 설정, 사용불가 설정 등을 할 수 있다.</p>
+        </li>
+    </ul>
+
+    <h2>select</h2>
+    <p>여러 개의 선택지를 가진 입력 양식을 생성</p>
+    <h3>option</h3>
+    <p>select, datalist 태그의 선택지를 만들어주는 태그(selected, name, value, disabled)</p>
+
+    <h2>textarea</h2>
+    <p>여러 줄의 텍스트를 입력할 수 있는 입력 양식(cols, rows 속성으로 크기 설정)</p>
+
+    <h2>button</h2>
+    <p>버튼을 생성(type, name, disabled)</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+div{
+    width: 80px;
+    height: 80px;
+}
+
+.box1{
+    float: right;
+    background-color:lemonchiffon;
+}
+
+.box2{
+    float: left;
+    background-color:lightblue;
+}
+
+.box3{
+    float: right;
+    background-color:lightgreen;
+}
+
+.box4{
+    clear: both;
+    border: 1px solid
+}
+
+.box5{
+    float: none;
+    border: 1px solid
+}
+
+.box6{
+    float: right;
+    border: 1px solid
+}
+
+/* 정렬 순서는 처음 써진 코드부터 차곡차곡 정렬됨에 주의 */
+/* float: none 은 떠다니지 않게 하는 것 (기본값)  */
+/* clear: both 는 float 속성을 무효화 시킨다. */

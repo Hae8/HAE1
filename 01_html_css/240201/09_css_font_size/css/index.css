@@ -1,0 +1,28 @@
+#container {
+    font-size: 30px;
+}
+
+.percent {
+    font-size: 50%;
+}
+/* 부모 크기를 기준 */
+
+.em {
+    font-size: 2em;
+}
+/* 부모 크기를 기준으로 곱하기 */
+
+.rem {
+    font-size: 1rem;
+}
+/* root(최상단에서 설정한 크기를 기준 */
+
+.vh {
+    font-size: 10vh;
+}
+/* 뷰 포트의 세로 넓이를 기준으로 % */
+
+.vw {
+    font-size: 10vw;
+}
+/* 뷰 포트의 가로 넓이를 기준으로 % */

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'WagleWagle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301-wagle@1.0/WagleWagle.woff') format('woff');
+}
+
+p{
+    /* 순서: style variant weight size/line-height family */
+    /* font-style, font-varient, font-weight는 font-size의 앞에 와야 합니다. */
+    /* line-height는 font-size의 바로 다음에 와야 하며 /로 구분해야 합니다. */
+    font: italic 400 120px/20px "WagleWagle", serif;
+}

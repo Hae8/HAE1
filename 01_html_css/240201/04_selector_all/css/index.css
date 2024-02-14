@@ -1,0 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*전체 선택자로 선택을 하면 하위 요소에 전부 같은 설정이 먹히게 된다.*/
+/*전체 선택자로 마진과 패딩을 초기화 해주는 것이 일반적이다.*/
+h1{
+    background-color: darkturquoise;
+}

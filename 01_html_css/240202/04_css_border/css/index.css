@@ -1,0 +1,38 @@
+.container{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color:lavender;
+    margin: 10px;
+}
+
+.bds1{
+    border: solid 10px;
+}
+
+.bds2{
+    border: solid 2px;
+}
+
+.bdd3{
+    border: dotted 3px;
+}
+
+.bdds4{
+    border: dashed 4px;
+}
+
+.bd5{
+    border-style: solid dotted double dashed;
+    border-width: 3px 5px 5px 10px;
+    border-color: red yellow;
+    /*border-top: solid 3px red;
+    border-left: dashed 10px yellow;
+    border-right: dotted 5px yellow;
+    border-bottom: double 5px red;*/
+}
+
+.bd6{
+    border: 10px solid plum;
+    border-radius: 10% 30% 50% 70%;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <form action="" method="get">
+        <header>
+            <fieldset>
+                <legend>계정 생성</legend>
+                <div>
+                    <label for="USERID">아이디 :</label> <!--대문자사용은 지양하는 것이 좋다! 서로다른 단어 사이에 대문자 사용-->
+                    <input type="text" name="USERID" id="USERID" placeholder="아이디를 입력해 주세요." />
+                    <button type="button" onclick="alert('사용가능한 아이디입니다')">확인</button>
+                </div>
+                <div>
+                    <label for="USERPW">비밀번호 :</label>
+                    <input type="password" name="USERPW" id="USERPW" />
+                </div>
+            </fieldset>
+        </header>
+
+        <main>
+            <fieldset>
+                <legend class="salmon_class">필수 입력</legend>
+                <div>
+                    <label for="USERNAME">이름 :</label>
+                    <input type="text" name="USERNAME" id="USERNAME" required autofocus />
+                </div>
+                <div>
+                    <label for="USERBIRTH">생년월일 :</label>
+                    <input type="date" name="USERBIRTH" id="USERBIRTH" min="1900-01-01" max="2024-12-31" required />
+                </div>
+                <div>
+                    <label for="USERAGE">나이 :</label>
+                    <input type="number" name="USERAGE" id="USERAGE" min="0" max="100" required />
+                </div>
+                <div>
+                    <span>성별 :</span>
+                    <input type="radio" name="GENDER" id="MALE" value="M" checked />
+                    <label for="MALE">남자</label>
+                    <input type="radio" name="GENDER" id="FEMALE" value="F" />
+                    <label for="FEMALE">여자</label>
+                </div>
+                <div>
+                    <span>취미 :</span>
+                    <input type="checkbox" name="HOBBY" id="HIKING" value="1" checked />
+                    <label for="HIKING">등산</label>
+                    <input type="checkbox" name="HOBBY" id="FISHING" value="2" />
+                    <label for="FISHING">낚시</label>
+                    <input type="checkbox" name="HOBBY" id="GAMING" value="3" />
+                    <label for="GAMING">게임</label>
+                    <input type="checkbox" name="HOBBY" id="READING" value="4" />
+                    <label for="READING">독서</label>
+                </div>
+                <div>
+                    <label for="USERIMAGE">프로필 이미지 등록 :</label>
+                    <input type="file" name="USERIMAGE" id="USERIMAGE" accept="image/*" required />
+                </div>
+                <div>
+                    <label for="USERPHONE">전화번호 :</label>
+                    <input type="tel" name="USERPHONE" id="USERPHONE" required />
+                </div>
+                <div>
+                    <label for="USEREMAIL">이메일 :</label>
+                    <input type="email" name="USEREMAIL" id="USEREMAIL" required />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>SNS (선택입력)</legend>
+                <div>
+                    <label for="USERSNS">SNS 주소 :</label>
+                    <input type="url" name="USERSNS" id="USERSNS" />
+                </div>
+                <div>
+                    <label for="POPULARITY">SNS 인기도 등급(1~5) :</label>
+                    <input type="range" name="POPULARITY" id="POPULARITY" value="1" min="1" max="5" />
+                </div>
+                <div>
+                    <label for="KEYWORD">검색 키워드 :</label>
+                    <input type="search" name="KEYWORD" id="KEYWORD" />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>추가 정보 (선택입력)</legend>
+                <div>
+                    <label for="USERCOLOR">좋아하는 색 :</label>
+                    <input type="color" name="USERCOLOR" id="USERCOLOR" />
+                </div>
+                <div>
+                    <label for="BEDTIME">취침시간 :</label>
+                    <input type="time" name="BEDTIME" id="BEDTIME" />
+                </div>
+                <div>
+                    <label for="ALARM">희망 알람 날짜 및 시간 :</label>
+                    <input type="datetime-local" name="ALARM" id="ALARM" />
+                </div>
+            </fieldset>
+        </main>
+
+        <footer>
+            <div>
+                <button type="submit">회원가입</button>
+                <button type="reset">다시입력</button>
+                <button type="button" onclick="alert('🎉')">이벤트 버튼</button>
+            </div>
+        </footer>
+    </form>
+</body>
+
+</html>

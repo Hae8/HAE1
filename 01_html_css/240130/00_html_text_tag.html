@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text 관련 태그들</title>
+</head>
+<body>
+    <h1>텍스트와 관련한 태그들</h1>
+    <h2>강조</h2>
+    <h3>strong 태그</h3>
+    <h4>설명</h4>
+    <p>
+        strong 태그는 해당 내용의 중요, 심각 또는 긴급성을 강하게 강조(strong important)하는데 사용되는 태그이다.<br/>
+        제목, 캡션, 문단 등에서 중요한 부분을 굵은 글꼴로 표시하여 일반적인 텍스트와 구별한다.
+    </p>
+    <h4>주의사항</h4>
+    <p>
+        단순히 굵은 글꼴 두께를 사용하기 위해서 strong 태그를 사용하지 말자.<br/>
+        <strong> strong 태그는 중요성을 나타낼 때 사용되어야 한다. </strong><br/> <!--tts나 검색 시 strong 태그 사용 부분이 강조된다.-->
+        스타일을 위해서는 <span style="font-weight:bold">CSS(font-weight:bold)</span>를 사용해야 한다.
+    </p>
+
+    <h3>em 태그</h3>
+    <h4>설명</h4>
+    <p>
+        em 태그는 주위 텍스트에 비해 문맥적으로 중요한 내용을 강조(stress emphasis)하는 태그이다.<br/> 
+        대부분의 브라우저에서는 em 태그는 텍스트를 기울임체로 표현한다.
+    </p>
+    <h4>주의사항</h4>
+    <p>
+        단순히 기울임체를 사용하기 위해서 em 태그를 사용하지 말자.<br/>
+        <em>em 태그는 중요성을 나타낼 때 사용되어야 한다. </em><br/> <!--tts나 검색 시 em 태그 사용 부분이 강조된다.-->
+        스타일을 위해서는 <span style="font-style:italic">CSS(font-style:italic)</span>을 사용해야 한다.
+    </p>
+
+    <h3>mark 태그</h3>
+    <h4>설명</h4>
+    <p>
+        mark태그는 주위 텍스트에 비해 중요한 내용을 표시(mark)하는 태그이다.<br/>
+        대부분의 브라우저에서는 mark 태그의 텍스트를 형광펜으로 표시한다. 
+    </p>
+    <h4>주의사항</h4>
+    <p>
+        단순히 형광펜 스타일을 사용하기 위해서 mark 태그를 사용하지 말자.<br/>
+        <mark>mark 태그는 중요성을 나타낼 때 사용되어야 한다. </mark><br/> <!--tts나 검색 시 mark 태그 사용 부분이 강조된다.-->
+        형광펜 스타일을 위해서는 <span style="background-color:yellow">CSS(background-color:yellow)</span>를 사용해야 한다.
+    </p>
+
+    <hr/>
+    <h2>변경</h2>
+    <h3>ins 태그</h3>
+    <h4>설명</h4>
+    <p>
+        ins 태그는 문서에 추가(insert)된 텍스트를 나타내는 태그이다.<br/>
+        대부분의 브라우저에서는 ins 태그의 텍스트를 <span style="text-decoration:underline">밑줄</span>로 표시한다.<br/>
+        주로 third party에서 제공하는 <ins>광고 태그</ins>로 자주 쓰인다.
+    </p>
+
+    <h3>del 태그</h3>
+    <h4>설명</h4>
+    <p>
+        del 태그는 문서에서 삭제(delete)된 텍스트를 나타내는 태그이다.<br/>
+        대부분의 브라우저에서는 del 태그의 텍스트를 <del datetime="2024-01-30">밑줄이 아니라</del> <span style="text-decoration: line-through">기울임체도 아니라</span> 취소선으로 표시한다.<br/>
+    </p>
+    <h3>cite와 datetime 속성</h3>
+    <h4>설명</h4>
+    <p>
+        cite 속성은 추가, 삭제된 내용에 대한 설명을 제공하는 리소스이다.<br/>
+        datetime 속성은 추가, 삭제된 내용의 시간 및 날짜를 나타낸다.
+    </p>
+
+    <hr/>
+    <h2>첨자</h2>
+    <h3>sup, sub 태그</h3>
+    <h4>설명</h4>
+    <p>
+        sup 태그는 주위 텍스트에 비해 <sup>상위 첨자(superscript)</sup>로 표현되는 텍스트를 나타내는 태그이다.<br/>
+        sub 태그는 주위 텍스트에 비해 <sub>상위 첨자(subscript)</sub>로 표현되는 텍스트를 나타내는 태그이다.
+    </p>
+    <h4>주의사항</h4>
+    <p>
+        sup, sub 태그는 단순한 표시, 모양 목적 등의 시각적 표현을 위한 것이 아니다.<br/>
+        타이포그래피적 규칙이나 관례 상 첨자로 표시되는 지수, 서수, 각주 번호, 변수 첨자, 화학식 등의 의미를 맞추기 위해 사용된다.
+    </p>
+
+
+    <hr/>
+    <h2>인용</h2>
+    <h3>q 태그</h3>
+    <h4>설명</h4>
+    <p>
+        q 태그는 <q>짧은 인용문(quotation)</q>을 나타내는 태그이다.<br/> <!--따옴표가 텍스트가 아니라 드래그로 인식되지 않는다.-->
+        짧은 인용문의 시작과 끝에 따옴표가 자동으로 삽입된다.
+    </p>
+    
+    <h3>blockquote 태그</h3> <!--보통은 8의 배수로 배수와 픽셀을 설정한다.-->
+    <h4>설명</h4>
+    <p>
+        blockquote 태그는 긴 인용문을 나타내는 태그이다.<br/>
+        긴 인용문은 블록 요소로 CSS의 margin 값이 기본으로 적용된다.
+    </p>
+    <h4>주의사항</h4>
+        <blockquote>
+            단순히 들여쓰기 스타일을 위해 사용하지 맙시다.<br/>
+            들여쓰기를 위해서는 CSS(margin-left)를 사용해야 합니다.<br/>
+            cite 속성을 사용하면 인용문의 출처를 제공할 수 있고, 여러 곳에서 이 정보를 활용할 수 있습니다.
+        </blockquote>
+
+
+    <hr/>
+    <h2>기타</h2>
+    <h3>abbr 태그</h3>
+    <h4>설명</h4>
+    <p>
+        abbr 태그는 약어(abbreviation)를 나타낸다.<br/>
+        <abbr title="abbreviation">abbr</abbr> 태그는 title 속성을 이용하기 적합하다.
+    </p>
+
+    <h3>address 태그</h3>
+    <h4>설명</h4>
+    <p>
+        address 문서의 작성자, 소유자의 연락처 정보를 나타내는 태그이다.<br/>
+        대부분의 브라우저에서는 기울임체로 표현된다.
+    </p>
+
+    <h3>dfn 태그</h3>
+    <h4>설명</h4>
+    <p>
+        <dfn>dfn 태그</dfn>는 용어의 정의(definition)를 나타내는 태그이다.
+    </p>
+
+    <h3>cite 태그</h3>
+    <h4>설명</h4>
+    <p>
+        cite 태그는 창작물의 제목을 나타내는 태그이다.<br/>
+        BTS-<cite>DNA</cite>
+    </p>
+
+    <h3>code 태그</h3>
+    <h4>설명</h4>
+    <p>
+        code 태그는 컴퓨터 코드를 나타내는 태그이다.<br/>
+        대부분의 브라우저에서는 code 태그의 텍스트를 <code>고정폭 글꼴</code>로 표현한다. <!--pre 태그는 수직적으로 표현이 되는 블럭 요소, code 태그는 수평적으로 표현이 되는 인라인 요소다.-->
+    </p>
+
+    <h3>주석(comment)</h3>
+    <h4>설명</h4>
+    <p>
+        주석은 브라우저에 표시되지 않는 텍스트이다.<br/>
+        주로 코드에 대한 설명이나 메모를 작성할 때 사용한다.
+        <!--주석을 이용해 코드를 숨기거나, 임시로 동작하지 않도록 할 수 있다.-->
+        <!--주석 안에 주석을 중첩하여 작성할 수는 없다.-->
+    </p>
+
+    <h3>엔티티(Entity)</h3>
+    <h4>설명</h4>
+    <p>
+        HTML에 미리 예약된 예약어를 통해, 웹브라우저가 평소와 다른 의미로 그것을 해석하게 할 수 있다.<br/>
+        &를 이용하여 &lt;, &gt;, &amp;, &nbsp;, &ensp;, &emsp;등으로 사용할 수 있다.
+    </p>
+    
+</body>
+</html>

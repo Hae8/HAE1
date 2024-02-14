@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 태그</title>
+    <style>
+        h2{
+            color:salmon
+        }
+        h3{
+            color:lightsalmon
+        }
+    </style>
+</head>
+<body>
+    <h1>입력 태그</h1>
+    <h2>입력 태그의 속성들</h2>
+    
+    <form action="" method="get">
+        <h3>text, password, search</h3>
+        <div>
+            <label for="text">텍스트</label>
+            <input type="text" name="text" id="text" value="기본값" readonly/>
+        </div>
+        <div>
+            <label for="password">비밀번호</label>
+            <input type="password" name="password" id="password" maxlength="4" required autofocus/> <!--required는 필수 입력 지정. autofocus 자동 커서-->
+        </div>
+        <div>
+            <label for="keyword">검색어</label>
+            <input type="search" name="keyword" id="keyword" placeholder="검색어를 입력하세요"/>
+        </div>
+
+        <h3>url, email, tel</h3>
+        <div>
+            <label for="url">URL</label>
+            <input type="url" name="url" id="url" placeholder="주소를 입력하세요"/>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" disabled/>
+        </div>
+        <div>
+            <label for="phone">전화번호</label>
+            <input type="tel" name="phone" id="phone" placeholder="전화번호 주소를 입력하세요"/>
+        </div>
+
+        <h3>checkbox, radio</h3> <!--checkbox는 다중선택 가능--> <!--radio는 name이 달라야 다중선택 가능-->
+        <div>
+            <input type="checkbox" name="checkbox" id="checkbox-a"  value="a" checked/>
+            <label for="checkbox-a">체크 박스-a</label>
+            <input type="checkbox" name="checkbox" id="checkbox-b"  value="b"/>
+            <label for="checkbox-b">체크 박스-b</label>
+        </div>
+        <div>
+            <input type="radio" name="radio-a" id="radio1" value="1" checked/>
+            <label for="radio1">라디오 박스-a1</label>
+            <input type="radio" name="radio-a" id="radio2" value="2"/>
+            <label for="radio2">라디오 박스-a2</label>
+        </div>
+        <div>
+            <input type="radio" name="radio-b" id="radio3" value="3"/>
+            <label for="radio3">라디오 박스-b3</label>
+            <input type="radio" name="radio-b" id="radio4" value="4"/>
+            <label for="radio4">라디오 박스-b4</label>
+        </div>
+
+        <h3>number, range, color</h3>
+        <div>
+            <label for="num">숫자</label>
+            <input type="number" name="num" id="num" value="10" step="5" min="10" max="50"/>
+        </div>
+            <label for="range">범위</label>
+            <input type="range" name="range" id="range" value="50" step="10" min="0" max="100"/>
+        <div>
+            <label for="color">색상</label>
+            <input type="color" name="color" id="color" value="#3e91b5"/>
+        </div>
+
+        <h3>date, month, week, time, datetime-local</h3>
+        <div>
+            <label for="date">날짜</label>
+            <input type="date" name="date" id="date" value="2024-01-31" min="2024-01-01" max="2024-12-31" />
+        </div>
+        <div>
+            <label for="month">날짜(월)</label>
+            <input type="month" name="month" id="month" value="2024-01" />
+        </div>
+        <div>
+            <label for="week">날짜(주)</label>
+            <input type="week" name="week" id="week" value="2024-W52"/>
+        </div>
+        <div>
+            <label for="time">시간</label>
+            <input type="time" name="time" id="time"/>
+        </div>
+        <div>
+            <label for="datetime-local">날짜-시간</label>
+            <input type="datetime-local" name="datetime-local" id="datetime-local"/>
+        </div>
+
+        <h3>file</h3>
+        <div>
+            <label for="file">파일</label>
+            <input type="file" name="file" id="file" accept="image/*,.pdf" multiple/>
+        </div>
+
+        <h3>hidden</h3>
+        <div>
+            <input type="hidden" name="hidden" id="hidden" value="숨은 값"/>
+        </div>
+
+        <h3>textarea</h3>
+        <div>
+            <label for="textarea">텍스트 입력</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10">긴 글 작성하기</textarea>
+        </div>
+
+        <h3>select, datalist</h3>
+        <div>
+            <label for="select">선택상자</label>
+            <select name="season" id="select" size="2">
+                <option selected disabled>=== 계절을 선택하세요 ===</option>
+                <option value="spring">봄</option>
+                <option value="summer">여름</option>
+                <option value="autumn">가을</option>
+                <option value="winter">겨울</option>
+            </select>
+        </div>
+        <div>
+            <label for="datalist">선택상자</label>
+            <input type="text" list="datalist"/>
+            <datalist name="datalist" id="datalist">
+                <option selected disabled>=== 계절을 선택하세요 ===</option>
+                <option value="spring">봄</option>
+                <option value="summer">여름</option>
+                <option value="autumn">가을</option>
+                <option value="winter">겨울</option>
+            </datalist>
+        </div>
+
+        <h3>image, submit, reset</h3>
+        <div>
+            <input type="image" name="image" src="C:\Users\user\multi_it\html\240131\submit_image.png" width="100"/> <br/>
+            <input type="submit" value="제출 하기"/> <br/>
+            <input type="reset" value="초기화 하기"/> <br/>
+            <input type="button" value="일반 버튼" onclick="alert('경고!')">
+        </div>
+        <div>
+            <button type="submit">제출 하기</button> <br/>
+            <button type="reset">초기화 하기</button> <br/>
+            <button type="button" onclick="alert('경고!')">경고 버튼</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

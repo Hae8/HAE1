@@ -1,0 +1,39 @@
+/*CSS 파일 경로*/ 
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+/* font 파일경로*/
+@font-face {
+    font-family: "WagleWagle";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301-wagle@1.0/WagleWagle.woff') format('woff');
+}
+
+.a {
+    font-family: Georgia;
+}
+.b {
+    font-family: serif;
+}
+.c {
+    font-family: sans-serif;
+}
+.d {
+    font-family: monospace;
+}
+.e {
+    font-family: cursive;
+}
+.f {
+    font-family: fantasy;
+}
+.g {
+    font-family: Georgia, "맑은 고딕"
+}
+
+.google {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+}   
+.noonnu {
+    font-family: "WagleWagle";
+}

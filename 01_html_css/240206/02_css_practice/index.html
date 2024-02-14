@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식 실습</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="#">about</a></li>
+            <li><a href="#">products</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">services</a></li>
+        </ul>
+        <ul>
+            <li class="logo"><a href="#">Main</a></li>
+        </ul>
+        <ul class="login">
+            <li><a href="#">login</a></li>
+            <li><a href="#">join</a></li>
+        </ul>
+    </header>
+
+    <main>
+            <form action="" method="get">
+                    <h1 id="template">회원가입 양식</h1>
+                    <div class="title">
+                        <div>이름</div>
+                        <div>아이디</div>
+                        <div>비밀번호</div>
+                        <div>비밀번호 확인</div>
+                        <div>이메일</div>
+                        <div>학년/반</div>
+                    </div>
+                    <fieldset class="user">
+                        <div>
+                            <label for="userName">이름</label>
+                            <input type="text" name="userName" id="userName" required autofocus />
+                        </div>
+                        <div>
+                            <label for="userId">아이디</label>
+                            <input type="text" name="userId" id="userId" placeholder="아이디를 입력해 주세요." />
+                            <button type="button" onclick="alert('사용가능한 아이디입니다')">중복확인</button>
+                        </div>
+                        <div>
+                            <label for="userPw">비밀번호</label>
+                            <input type="password" name="userPw" id="userPw" required />
+                        </div>
+                        <div>
+                            <label for="userPwchk">비밀번호 확인</label>
+                            <input type="password" name="userPwchk" id="userPwchk" required />
+                        </div>
+                        <div>
+                            <label for="userEmail">이메일</label>
+                            <input type="email" name="userEmail" id="userEmail" />
+                            <button type="button" onclick="alert('사용가능한 이메일입니다')">이메일 중복확인</button>
+                        </div>
+                        <div>
+                            <label for="userGrade">학년</label>
+                            <input type="number" name="userGrade" id="userGrade" min="1" max="6" />
+                            <label for="userClass">반</label>
+                            <input type="number" name="userClass" id="userClass" min="1" max="5" />
+                        </div>
+                    </fieldset>
+                    <div class="button">
+                        <button type="reset">초기화</button>
+                        <button type="submit">회원가입</button>
+                    </div>
+            </form>
+    </main>
+    <footer>
+        <div>
+            상호: ooo| 대표: ooo | 개인정보관리책임자: oo|전화: 000-0000-0000 | 이메일 : master@example.com 주소: 000 000 000 | 사업자등록번호: 000-00-00000 |
+        </div>
+        <div>
+            사업자정보확인 | 홈페이지 이용약관 | 개인정보처리방침
+        </div>
+        <div>
+            © copyright 2024 CHOI Inkyu.
+        </div>
+    </footer>
+</body>
+</html>

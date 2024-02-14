@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 기초</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <h1>미디어 쿼리(Media Query)</h1>
+    <div>
+        <div>
+            /* 스마트폰 (세로) ---------------- */
+            @media only screen
+            and (max-width : 320px)
+            {
+            /* Add Your CSS Styling Here */
+            }
+        </div>
+        <div>
+            /* 스마트폰 (가로) ---------------- */
+            @media only screen
+            and (min-width : 321px)
+            and (max-width : 767px)
+            {
+            /* Add Your CSS Styling Here */
+            }
+        </div>
+        <div>
+            /* 태블릿 (세로) -------------------- */
+            @media only screen
+            and (min-device-width : 768px)
+            and (max-device-width : 1024px)
+            and (orientation : portrait)
+            {
+            /* Add Your CSS Styling Here */
+            }
+        </div>
+        <div>
+            /* 태블릿 (가로) ------------------- */
+            @media only screen
+            and (min-device-width : 768px)
+            and (max-device-width : 1024px)
+            and (orientation : landscape)
+            {
+            /* Add Your CSS Styling Here */
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+input[placeholder]{
+    background-color: lavender;
+}
+
+input[type="url"], input[type="email"], input[type="tel"] {
+    background-color: lemonchiffon;
+}
+
+/* [attr = "value"] : (속성, 속성값)이 완벽히 일치하는 요소에 스타일을 적용!!!(완벽히 일치)*/
+/*fieldset[class="input-box"]{
+    border: 5px dotted palevioletred
+}*/
+
+
+/* [attr ~= "value"] : (속성, 속성값)이 일치하는 요소에 스타일을 적용(단어 기준, 공백 구분)*/
+fieldset[class~="input-box"]{
+    border: 5px dotted palevioletred
+}
+
+/* [attr |= "value"] : (속성, 속성값[접두사])이 일치하는 요소에 스타일을 적용(접두사 구분, 하이픈 구분 또는 완벽히 일치) */
+fieldset[class|="option"]{
+    border: 5px dotted paleturquoise
+}
+
+/* [attr ^= "value"] : value로 시작하는 속성값!!!) */
+fieldset[class^="input"]{
+    background-color:lightcyan
+}
+
+/* [attr $= "value"] : value로 끝나는 속성값!!!) */
+fieldset[class$="input"]{
+    background-color:lavenderblush
+}
+
+/* [attr *= "value"] : value가 포함된 속성값!!!) */
+fieldset div input[id*="_"]{
+    background-color:gainsboro
+}
+
+/* css 구성할 떄 캐스캐이딩에 주의하기!*/

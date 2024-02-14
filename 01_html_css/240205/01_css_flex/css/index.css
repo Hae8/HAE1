@@ -1,0 +1,35 @@
+#flex_box{
+    height: 200px;
+    display: flex;
+    /* inline-flex와 flex의 차이: flex는 전체 너비의 길이가 늘어난다 */
+    border: 1px solid black;
+    flex-direction: row; /* row row-inverse column column-inverse */
+    justify-content:space-between;
+    /* justify-content 로 개체들의 배치를 지정할 수 있다. */
+    align-items: center;
+    /* center와 baseline의 차이: baseline은 중앙 정렬을 한 뒤 묶음으로 위쪽 정렬을 한다. */
+    /* align-items은 전체를 대상, align-self는 각각을 대상 */
+    /* align-content는 여러 줄일 때, 여러 줄에 대한 배치방법 */
+}
+
+.flex_item{
+    margin: 1px;
+    background-color: lemonchiffon;
+    width: 100px;
+    height: 100px;
+}
+
+.box1{
+    order: 1;
+    flex: 1 1 0;
+}
+
+.box2{
+    order: 2;
+    flex: 2 2 0;
+}
+
+.box3{
+    order: 3;
+    flex: 1 1 0;
+}

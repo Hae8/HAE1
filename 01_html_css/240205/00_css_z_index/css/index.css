@@ -1,0 +1,25 @@
+#wrapper{
+    position: relative;
+}
+
+.box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.box1 {
+    background-color: lavenderblush;
+    z-index: 1;
+}
+.box2 {
+    top: 30px;
+    left: 50px;
+    background-color: lemonchiffon;
+    z-index: 2;
+}
+.box3 {
+    top: 50px;
+    left: 20px;
+    background-color: lightblue;
+}

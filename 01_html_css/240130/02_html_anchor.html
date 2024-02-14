@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앵커(Anchor) 태그</title>
+</head>
+<body>
+    <h1>앵커 태그</h1>
+
+    <h2 id="definition"> 정의</h2>
+    <p>앵커(a) 태그는 링크를 만들어주는 태그입니다.</p>
+
+    <h2>속성</h2>
+    <ul>
+        <li>href: 링크할 주소를 지정</li>
+        <li>target: 링크를 열 위치를 지정</li>
+    </ul>
+
+    <h3>href 속성</h3>
+    <ul>
+        <li>링크할 주소를 지정한다.</li>
+        <li>상대 경로와 절대 경로 모두 사용 가능하다.</li>
+        <li>다른 페이지로 이동할 수 있게 한다.</li>
+        <li>페이지 내부에서 특정 위치로 이동할 수도 있다.</li>
+        <li>이메일과 전화번호도 연결 가능하다.</li>
+    </ul>
+
+    <h3>target 속성</h3>
+    <ul>
+        <li>링크를 열 위치를 지정한다.</li>
+        <li>기본값은 _self이다.</li>
+        <li>_self는 현재 창에서 링크를 연다.</li>
+        <li>_blank는 새 창에서 링크를 연다.</li> <!--_blank는 보안 취약점이 있다.-->
+    </ul>
+
+    <h3>target="_blank"의 보안 문제</h3>
+    <ul>
+        <li>target="_blank"는 보안취약점(정보 노출)이 존재할 수 있다.</li>
+        <li>브라우저의 팝업 차단기에 의해 차단될 우려가 있다.</li>
+        <li>target="_blank"에 rel="noopener noreferrer"을 추가하면,
+            외부 페이지에서 현재 페이지에 대한 악의적인 조작을 방지하고,
+            사용자의 개인정보를 보호할 수 있어서 보다 안전하게 처리된다.</li>
+    </ul>
+
+    <dl>
+        <dt>noopener</dt>
+        <dd>
+            새 창, 새 탭을 열 때 부모 창에 대한 참조를 막는다.<br/>
+            새로운 창이 부모 창에 대한 제어권을 가질 수 없게 한다. (보안문제 제거)<br/>
+            스크립트가 새로 열린 창의 내용을 조작할 수 없게 한다.
+        </dd>
+        <dt>noreferrer</dt>
+        <dd>
+            HTTP 리퍼러 헤더를 제거한다.<br/>
+            리퍼러 헤더는 현재 페이지에서 새로 열린 페이지로 전달되는 정보이다.<br/>
+            noreferrer를 쓰면, 외부 사이트가 어디에서 링크를 클릭했는지 알 수 없게 한다.
+        </dd>
+    </dl>
+
+    <hr/>
+
+    <h2>href 예시</h2>
+
+    <h3>절대 경로</h3> <!--대한민국 서울특별시 중구 퇴계로 2가-->
+    <ul>
+        <li><a href="http://naver.com">네이버</a></li>
+        <li><a href="C:\Users\user\multi_it\html\240130\01_html_style.html">HTML 스타일</a></li>
+        <li><a href="http://127.0.0.1:5500/240130/02_html_anchor.html">HTML 스타일(live)</a></li>
+    </ul>
+
+    <h3>상대 경로</h3> <!--서울특별시 중구 퇴계로 2가-->
+    <ul>
+        <!--.은 현재 폴더를 의미-->
+        <li><a href="./01_html_style.html">HTML 스타일</a></li>
+        <!--..은 상위 폴더를 의미-->
+        <li><a href="../240129/test.html">자기소개</a></li>
+    </ul>
+
+    <h3>특별한 경로</h3>
+    <ul>
+        <li><a href="#definition">앵커 태그의 정의</a></li>
+        <li><a href="mailto:alt9ir@gmail.com">이메일 연결</a></li>
+        <li><a href="tel:+82097669403">전화번호 연결</a></li>
+    </ul>
+
+    <h2>target 예시</h2>
+    <ul>
+        <li><a href="http://naver.com">No target</a></li>
+        <li><a href="http://naver.com" target="_self">_self target</a></li>
+        <li><a href="http://naver.com" target="_blank" rel="noopener noreferrer">_blank target</a></li>
+    </ul>
+
+</body>
+</html>

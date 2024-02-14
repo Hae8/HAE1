@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="https://caniuse.com/">CANIUSE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            
+            <input type="search" placeholder="검색어를 입력하세요"> </input>
+            <br/>
+            <input type="search" disabled> </input>
+            <br/>
+
+            <div class="box gender_box">
+                <label for="male">
+                <input type="checkbox" class="gender_chk" name="gender" id="male" value="male"><span>남자</span></label>
+                <label for="female">
+                    <input type="checkbox" class="gender_chk" name="gender" id="female" value="female"><span>여자</span></label>
+            </div>
+            <div class="box">
+                    <h1>좋아하는 음식</h1>
+                    <p>양꼬치</p>
+                    <p>치킨</p>
+                    <p>삼겹살</p>
+                    <p>마라탕</p>
+                    <p>떡볶이</p>
+                    <p>갈비찜</p>
+            </div>
+        </section>
+        <aside>
+            <p>사이드 내용</p>
+        </aside>
+        <summary>
+            <p>요약</p>
+        </summary>
+    </main>
+    <footer>
+        <p>푸터 내용</p>
+    </footer>
+    </div>
+</body>
+</html>

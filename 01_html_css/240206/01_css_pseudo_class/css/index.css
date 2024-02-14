@@ -1,0 +1,54 @@
+ul{
+    list-style: none;
+}
+
+/* before와 after에는 content가 반드시 필요하다. */
+li.hot::after{
+    content: "HOT";
+    font-size: x-small;
+    background-color: red;
+    color: white;
+    margin: 0px 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* li.new::after{
+    content: "NEW";
+    font-size: x-small;
+    background-color: blue;
+    color: white;
+    margin: 0px 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+} */
+
+li:not(.hot)::after{
+    content: "특가!";
+    font-size: x-small;
+    background-color: gold;
+    color: black;
+    margin: 0px 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+li::before{
+    display: inline-block;
+    content:".";
+    background-image: url(../product_icon2.png);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    width: 16px;
+    margin-right: 10px;
+}
+
+p::first-letter{
+    font-size: large;
+    font-weight: bold;
+}
+
+p::first-line{
+    font-weight: bold;
+}

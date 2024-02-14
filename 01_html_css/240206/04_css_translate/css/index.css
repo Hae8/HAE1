@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+section{
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 50px;
+    perspective: 150px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+
+.box1:hover{
+    transform: translateX(50px);
+}
+
+.box2:hover{
+    transform: translateY(50px);
+}
+
+.box3:hover{
+    transform: translateZ(50px);
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+button:active{
+    box-shadow: 0 1px 4px #777;
+    transform: translate(2px, 2px);
+}
