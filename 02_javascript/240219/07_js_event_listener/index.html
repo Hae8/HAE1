@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 리스너</title>
+</head>
+<body>
+    <input id="btn" type="button" value="클릭" />
+    <script>
+        // 요소.on이벤트이름 = 함수명;
+        // 요소.on이벤트이름 = function () {};
+        // 요소.on이벤트이름 = () => {};
+
+        /*
+        요소.on 방식은 덮어 씌워지는 방식이지만
+        요소.addEventListner 방식은 누적 이벤트 방식이다.
+        요소.addEventListner 방식은 IE 6,7,8 버전은 지원하지 않는다.
+        */
+
+        // 요소.addEventListner(이벤트명, 함수, 캡처링여부); 캡처링: 누적된 이벤트의 순서를 정하는 것
+        let btn = document.querySelector('#btn');
+        btn.addEventListener("click", () => {alert('a')}, false)
+        btn.addEventListener("click", function () {alert('b')}) //이벤트가 누적되어 작동한다.
+    </script>
+</body>
+</html>

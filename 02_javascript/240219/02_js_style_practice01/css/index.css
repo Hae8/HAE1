@@ -1,0 +1,65 @@
+#container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+#top ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+li>span {
+    font-weight: bold;
+    width: 70px;
+    float: left;
+}
+
+#view {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#detail {
+    margin: 0 auto;
+    width: 95%;
+}
+
+#detail p:first-child {
+    font-size: 1rem;
+    line-height: 1.8;
+    white-space: pre-line;
+    font-weight: 500;
+}

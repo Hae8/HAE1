@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 필드에 입력한 글자 수 체크</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <div id="contents">
+        <input type="text" id="word">
+        <button id="btn">글자 수 확인</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        let btn = document.querySelector('#btn'); 
+        let word = document.querySelector("#word");
+        let wordLength = 0;
+
+        //버튼 클릭에 대한 동작 확인
+        btn.addEventListener('click', (e) => {
+            if (e.ctrlkey) {
+                console.log('컨트롤 키를 누르고 클릭했습니다.');
+            }else{
+                console.log('그냥 클릭했습니다.');
+            }
+        })
+
+/* 글자수 확인 (버튼클릭)
+        btn.addEventListener('click', () => { //버튼 클릭 시, 글자 수 확인
+            wordLength = word.value.length;
+            document.querySelector("#result").innerText = wordLength;
+        })
+*/
+/* 글자수 확인 (실시간)
+        word.addEventListener('keyup', () => { //버튼 클릭 시, 글자 수 확인
+            wordLength = word.value.length;
+            document.querySelector("#result").innerText = wordLength;
+        })
+*/
+
+/* 글자수 확인 (실시간, target 사용)*/
+        word.addEventListener('keyup', (e) => { //버튼 클릭 시, 글자 수 확인
+            wordLength = e.target.value.length;
+            document.querySelector("#result").innerText = wordLength;
+        })
+
+    </script>
+</body>
+</html>

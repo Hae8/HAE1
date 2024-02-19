@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트에서 스타일 수정</title>
+</head>
+<body>
+    <h1>자바스크립트에서 스타일 수정</h1>
+    <script>
+        let title = document.querySelector('h1');
+        
+        /*
+        title.onclick = function(){
+        title.innerText = '제목변경';
+        }
+
+        //같은 내용을 화살표 함수를 이용해 작성할 수 있다.
+        title.onclick = () => title.innerText = '제목변경';
+        */
+
+        title.onclick = () => {
+            title.style.color = "red";
+            title.style.backgroundColor = "blue";
+            title.style.fontSize - "15px"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 2</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <button id="btn">&#9776;</button>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    let btn = document.querySelector('#btn');
+    let nav = document.querySelector('#nav');
+    
+    // 화살표 함수로도 작성해 볼 수 있다.
+    btn.onclick = () => {
+      btn.classList.toggle('active')
+      nav.classList.toggle('active')
+    }
+
+/* 화살표 함수를 길게 풀어 쓴 것
+    btn.onclick = () => {
+      toggling(btn,nav)
+    }
+    function toggling(elem1,elem2) {
+      elem1.classList.toggle('active');
+      elem2.classList.toggle('active');
+    }
+*/
+
+/* 토글로도 작성해 볼 수 있다.
+    btn.onclick = function(){ // 버튼을 누르면 동작하는 블럭
+      btn.classList.toggle('active')
+      nav.classList.toggle('active')
+      
+*/
+
+/* if문으로도 작성해 볼 수 있다.
+      if (btn.classList.contains('active') || nav.classList.contains('active')) { // active 있는 경우라면 
+        btn.classList.remove('active');
+        nav.classList.remove('active');
+
+      } else { //  active 있는 경우 외에는 
+        btn.classList.add('active');
+        nav.classList.add('active');
+      }
+
+  }
+*/
+  </script>
+</body>
+</html>

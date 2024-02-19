@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>연습문제 1</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js"></script>
+</head>
+<body>
+	<div id="container">
+    <div id="top">
+      <img src="images/poster.jpg" width="250" alt="책 표지">
+      <ul>
+        <h1>웡카 - Wonka</h1>
+        <li><span>감독</span>폴 킹</li>
+        <li><span>배우</span>티모시 살라메, 칼라 레인, 올리비아 콜맨, 톰 데이비스, 휴 그랜트, 샐리 호킨스</li>
+        <li><span>장르</span>판타지, 드라마</li>
+        <li><span>기본정보</span>전체관람가, 116분, 미국, 영국</li>
+        <li><span>개봉</span>2024.01.31</li>        
+        <li><button id="view">상세 설명 보기</button></li>
+      </ul>      
+    </div>
+    
+		<div id="detail" class="hidden">
+      <p>
+        세상에서 가장 달콤한 여정
+        좋은 일은 모두 꿈에서부터 시작된다!
+      </p>
+      <p>마법사이자 초콜릿 메이커 ‘윌리 웡카’의 꿈은 디저트의 성지, ‘달콤 백화점’에 자신만의 초콜릿 가게를 여는 것.
+        가진 것이라고는 낡은 모자 가득한 꿈과 단돈 12소버린 뿐이지만 특별한 마법의 초콜릿으로 사람들을 사로잡을 자신이 있다. 
+      </p>
+      <p>하지만 먹을 것도, 잠잘 곳도, 의지할 사람도 없는 상황 속에서 낡은 여인숙에 머물게 된 ‘웡카’는
+        ‘스크러빗 부인’과 ‘블리처’의 계략에 빠져 눈더미처럼 불어난 숙박비로 인해 순식간에 빚더미에 오른다.
+        게다가 밤마다 초콜릿을 훔쳐가는 작은 도둑 ‘움파 룸파’의 등장과 ‘달콤 백화점’을 독점한 초콜릿 카르텔의 강력한 견제까지.
+        세계 최고의 초콜릿 메이커가 되는 길은 험난하기만 한데…</p>
+    </div>
+	</div>
+  <script>
+    let view_btn = document.querySelector('#view');
+    let detail = document.querySelector('#detail');
+    
+    view_btn.onclick = function(){ // 버튼을 누르면 동작하는 블럭
+      // hidden 클래스에 display 속성 none이 붙어있으므로 hidden 클래스를 제거/추가 하는 기능을 구현한다.
+      
+      //설명이 안보이면 -> 보이게
+      if (detail.classList.contains('hidden')) { // hidden이 있는 경우라면 (설명이 안보이면)
+        // detail.classList.remove('hidden');
+        view_btn.innerText = "상세 설명 닫기"; // view_btn의 이름을 바꾼다
+        
+        //설명이 보이면 -> 안보이게
+      } else { //  hidden이 있는 경우 외에는 (설명이 보이면)
+        // detail.classList.add('hidden');
+        view_btn.innerText = "상세 설명 보기" // view_btn의 이름을 바꾼다
+      }
+
+      detail.classList.toggle('hidden') // 같은 기능을 toggle로도 구현할 수 있다. ( hidden이 알아서 제거/추가 된다.)
+      // 같은 내용을 화살표 함수로도 구현할 수 있다.
+  }
+  </script>
+</body>
+</html>

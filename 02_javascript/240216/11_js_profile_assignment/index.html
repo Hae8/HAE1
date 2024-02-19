@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM onClick</title>
+    <script src="https://kit.fontawesome.com/b181a795e1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="member1">
+    <section class="wrap container my-5 p-3 bg-white rounded-3">
+        <nav class="menu d-flex justify-content-between p-3">
+            <i class="fa-solid fa-bars fs-4"></i>
+            <i class="fa-regular fa-note-sticky fs-4"></i>
+        </nav>
+        <article class="profile p-3 text-center">
+            <img class="rounded-circle" src="https://placehold.co/200x200" width="200" height="200" alt="프로필_사진">
+            <div class="mt-3">
+                <h1 class="fs-5 fw-bold">BLACKPINK</h1>
+                <h2 class="fs-6">FRONTEND DEVELOPER</h2>
+            </div>
+            <button class="btn-view btn shadow rounded-pill my-2 w-75">VIEW MORE</button>
+        </article>
+        <ul class="contact list-unstyled w-75 mx-auto">
+            <li>
+                <i class="fa-brands fa-facebook"></i>
+                <span class="ms-3 text-capitalize">visit my facebook page</span>
+            </li>
+            <hr>
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span class="ms-3">blackpink@naver.com</span>
+            </li>
+        </ul>
+        <nav class="others d-flex justify-content-evenly w-75 mx-auto mt-3 py-3">
+            <span class="on d-inline-block rounded-circle"></span>
+            <span class="d-inline-block rounded-circle"></span>
+            <span class="d-inline-block rounded-circle"></span>
+            <span class="d-inline-block rounded-circle"></span>
+        </nav>
+    </section>
+    <script>
+        let navi_link = document.querySelectorAll('.others > span');
+        let obj_list = [
+            { name: '지수', img: 'https://i.namu.wiki/i/qDWo7jnTiRCv71Nftf_wd__oRbfOFGdMBibGDMpy0lKEadTQB9pva96Qs7PGhFUd3rs87kcWIQXl3Jg6Shur72xhjQ0JdSO5S55RZ6E52fdTjznVvQFIbAiJh-jDNwmxqx9c9fGbr5JwUOvQziBEVw.webp' },
+            { name: '제니', img: 'https://i.namu.wiki/i/vkX2H8O6IFQdaqKbXOxuiy6QwBg6O-sjK6ESxTeMCYx4FwEzaFZtvSLIViRpxN-4C6j8YfXjYy_wtn-fGi3FBpCJD_wrOPyfn7Baui6UxdV5t2pin5k13gsmK8t9vV0QBPBXlhavMgPncpQ4Lteh8Q.webp' },
+            { name: '로제', img: 'https://i.namu.wiki/i/ep26Ie58oBuPNXMc4-2cyf4hnO5HX2emfkFfoALQBfxBLw9WlZm7ImmZcGee8DaufXSXpsv4NcOyruSqMw21Yq1E97hMkd8b4e3f_0RqHratjOb_1TqaZkhbZ4-wTIKYUyS6YjexNVn0lfDmh-YqLQ.webp' },
+            { name: '리사', img: 'https://i.namu.wiki/i/KBTAHQQJPqUVciXCI3qxBnjxbY9V5VEcYA5Afn8OQL6iEJ3qqZpCyFi7yxcnIizVU4lIePxxT0bKiciqReL7amM65mYpytDjcJBaGa_6NOB6S34ECmHxUNIcJKb6KiSR9cfVoFc5K4NZjyiBo4Hy2w.webp' },
+        ]
+
+        for (let i = 0; i < navi_link.length; i++) {
+            navi_link[i].onclick = function () {
+                document.body.className = `member${i+1}`;
+
+                let name = document.querySelector('article.profile h2');
+                let img = document.querySelector('article.profile img');
+                name.innerText = obj_list[i].name;
+                img.src = obj_list[i].img;
+
+                for(let elem of navi_link) {
+                    if (elem === navi_link[i]) {
+                        elem.classList.add('on');
+                    } else {
+                        elem.classList.remove('on');
+                    }
+                }
+            }
+        }
+        // navi_link[0].onclick = function () {
+        //     alert('지수');
+        // }
+
+        // navi_link[1].onclick = function () {
+        //     alert('제니');
+        // }
+
+        // navi_link[2].onclick = function () {
+        //     alert('로제');
+        // }
+
+        // navi_link[3].onclick = function () {
+        //     alert('리사');
+        // }
+    </script>
+</body>
+
+</html>
