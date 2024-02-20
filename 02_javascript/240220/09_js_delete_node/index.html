@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 삭제</title>
+    <style>
+        #cart {
+            padding: 0 20px;
+        }
+        span {
+            color: #ccc;
+            cursor: pointer;
+        }
+        span:hover{
+            color: crimson;
+        }
+        p{
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart">
+        <h1>장바구니</h1>
+        <div id="products">
+            <p>
+                <span>&cross;</span>
+                아이폰 15
+            </p>
+            <p>
+                <span>&cross;</span>
+                아이폰 15 plus
+            </p>
+            <p>
+                <span>&cross;</span>
+                아이폰 15 pro max
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const btns = document.querySelectorAll('p > span');
+        for (let btn of btns) {
+            btn.addEventListener('click', function() {
+                this.parentNode.remove();
+
+                /* 삭제하려는노드의부모.removechild(삭제하려는노드) 를 이용해서도 쓸 수 있다.
+                this.parentNode.parentNode.removeChild(this.parentNode);
+                */
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <h1>노드 만들기 / 추가하기 / 삭제하기</h1>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+    <script>
+        let newP = document.createElement("p");
+        let textNode = document.createTextNode('Python');
+        newP.appendChild(textNode);
+        // newP..innerText = "Python"; // 위 코드를 innerText를 이용하면 이렇게도 표현할 수 있다.
+        // document.body.appendChild(newP); // 새로 만든 newP를 body 밑에 붙여준다
+        
+        // 노드 추가하기: insertBefore(추가노드, 기준노드);
+        let js = document.querySelector('p:nth-child(4)');
+        document.body.insertBefore(newP, js)
+
+        // 특정 노드 삭제하기
+        let h1 = document.querySelector('h1');
+        h1.remove();
+
+        /* 위 코드와 같은 기능을 하고, 위 코드가 지원되지 않는 IE 에서도 사용할 수 있다.
+        document.body.removeChild(h1); 
+        */
+    </script>
+</body>
+</html>

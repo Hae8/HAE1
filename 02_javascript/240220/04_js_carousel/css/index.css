@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #bbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow{
+    font-size: 2em;
+    padding: 0 20px;
+    color: crimson;
+    cursor: pointer;
+}
