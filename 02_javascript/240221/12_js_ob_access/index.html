@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keys(), values(), entries()</title>
+</head>
+<body>
+    <script>
+        let book = {
+            title: "수학의 정석",
+            pages: 500,
+            price() {
+                return pages * 10;
+            }
+        }
+
+        // let keys = Object.keys(book);
+        // console.log(keys);
+        Object.keys(book).forEach(k => {
+            console.log(k);
+        })
+
+        // let values = Object.values(book);
+        // console.log(values);
+        Object.values(book).forEach(v => {
+            console.log(v);
+        })
+
+        // let entries = Object.entries(book);
+        // console.log(entries);
+        Object.entries(book).forEach(p => {
+            p.forEach((e,i) => {
+                console.log(i, e);
+            })
+        })
+
+    </script>
+</body>
+</html>

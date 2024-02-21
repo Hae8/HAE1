@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 주요 메서드</title>
+</head>
+<body>
+    <button id="prompt">입력</button>
+    <button id="alert">알림</button>
+    <button id="confirm">확인, 취소</button>
+    <button id="close">창 닫기</button>
+    <button id="move">이동</button>
+    <button id="print">인쇄</button>
+    
+    <div style="background-color: aliceblue; width: 100px; height: 1500px; margin: 10px 0;"></div>
+    
+    <button id="scroll">스크롤</button>
+
+    <script>
+        /*
+        window객체의 주요 메서드들 : 웹 브라우저 창과 관련된 것이 대부분이다.
+        alert(), confirm(), prompt()가 window객체에 있다.
+        */
+        
+        const buttons = document.querySelectorAll('button');
+        let child = window.open('', '', 'width=200px, height=200px')//window.open('파일경로', '창 이름', '창 옵션')
+        for (let button of buttons){
+            let id = button.getAttribute('id');
+            switch (id) {
+                case 'prompt':
+                    button.addEventListener('click', () => {
+                        window.prompt('입력하세요', '기본값');
+                        console.log(result);
+                    });
+                    break;
+                case 'alert':
+                    button.addEventListener('click', () => window.alert('객체의 주요 함수'));
+                    break;
+                case 'close':
+                    button.addEventListener('click', () => window.close());
+                    break;
+                case 'confirm':
+                    button.addEventListener('click', () => {
+                        let result = window.confirm('확인 하시겠습니까?');
+                        console.log(result);
+                    });
+                    break;
+                case 'move':
+                    button.addEventListener('click', () => {
+                        child.moveBy(10,10); //(x,y)만큼 이동
+                    });
+                    break;
+                case 'print':
+                    button.addEventListener('click', () => window.print());
+                    break;
+                case 'scroll':
+                    button.addEventListener('click', () => window.scrollTo({top: 0, left: 0, behavior:'smooth'}));
+                    break;
+            }
+        }
+
+        // window.alert(`객체의 주요함수`);
+        // window.confirm()
+        // window.prompt()
+    </script>
+
+    <br />
+    <a href="../00_js_window/index.html">윈도우 객체1</a> <br />
+    <a href="../01_js_window_method/index.html">윈도우 객체 메소드</a> <br />
+    <a href="../02_js_popup/index.html">팝업</a> <br />
+    <a href="../03_js_history/index.html">히스토리</a> <br />
+
+    <button id="back">뒤로 가기</button>
+    <button id="forward">앞으로 가기</button>
+
+    <script>
+        const back = document.querySelector('#back');
+        const forward = document.querySelector('#forward');
+        const start = document.querySelector('#start');
+
+        back.addEventListener('click', () => history.back());
+        forward.addEventListener('click', () => history.forward());
+    </script>
+</body>
+</html>

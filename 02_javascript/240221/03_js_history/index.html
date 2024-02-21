@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+</head>
+    <button onclick="location.replace('https://www.naver.com/')">이동</button> <!-- 문서 자체를 바꿔치기 하기 때문에 뒤로가기가 작동하지 않는다. -->
+    <button onclick="location.href='https://www.naver.com/'">이동</button> <!-- 뒤로가기를 사용하려면 href를 사용해야 한다. href는 함수가 아니다. -->
+
+    <br />
+    <a href="../00_js_window/index.html">윈도우 객체1</a> <br />
+    <a href="../01_js_window_method/index.html">윈도우 객체 메소드</a> <br />
+    <a href="../02_js_popup/index.html">팝업</a> <br />
+    <a href="../03_js_history/index.html">히스토리</a> <br />
+
+    <button id="back">뒤로 가기</button>
+    <button id="forward">앞으로 가기</button>
+
+    <script>
+        const back = document.querySelector('#back');
+        const forward = document.querySelector('#forward');
+
+        back.addEventListener('click', () => history.back());
+        forward.addEventListener('click', () => history.forward());
+    </script>
+</body>
+</html>

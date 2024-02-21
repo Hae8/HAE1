@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인스턴스 객체 </title>
+</head>
+<body>
+    
+    <script>
+        let date = new Date(); //Date라는 객체에서 date라는 인스턴스 객체를 추출했다.
+        console.log(date);
+        console.log(typeof(date)); //문자열처럼 보이지만 객체이다.
+        console.log(date.toGMTString()); //문자열로 바꿔준다.
+        console.log(date.toUTCString()); //문자열로 바꿔준다.
+        console.log(date.toLocaleString()) //이용자 지역에 적절한 문자열로 바꿔준다.
+        console.log(date.toDateString()) // 날짜만 가져와 문자열로 바꿔준다.
+        console.log(date.toTimeString())// 시간만 가져와 문자열로 바꿔준다.
+
+        console.log(date.getFullYear(), '년'); // 년
+        console.log(date.getMonth(), '월'); // 월 (0부터 11까지 있다.)
+        console.log(date.getDate(), '일'); // 일 (Date만 1부터 시작한다.)
+        console.log(date.getDay(), '요일'); // 요일
+        console.log(date.getTime(), '시각'); // 시간; 1970년 1월 1일 00시 00분 00초 000부터 진행한 시간
+        console.log(date.getHours(), '시'); // 시
+        console.log(date.getMinutes(), '분'); // 분
+        console.log(date.getSeconds(), '초'); // 초
+        console.log(date.getMilliseconds(), 'ms'); // ms
+
+        let birth = new Date("2002-02-04");
+        console.log(birth.getDay(), '요일');
+        console.log(birth.getHours(), birth.getMinutes(), birth.getSeconds(), '시분초');
+
+        let workIn = new Date("2024-02-21T08:30:00");
+        console.log(workIn.getDay(), '요일');
+        workIn.setMinutes(45);
+        console.log(workIn.getHours(), workIn.getMinutes(), workIn.getSeconds(), '시분초');
+
+    /* 자바 스크립트에서 날짜/시간 입력 방식*/
+    new Date("2024-02-21T00:00:00");
+    new Date("2024-02-21");
+    new Date("2024-02");
+    new Date("2024");
+
+    new Date("02/21/2024");
+    new Date("Mon Feb 21 2024 00:00:00 GMT+0900 (한국 표준시)")
+
+    </script>
+</body>
+</html>

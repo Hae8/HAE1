@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수를 사용해 객체를 정의</title>
+</head>
+<body>
+    <script>
+        function Book(title= "수학의 정석", pages = 500) {
+            this.title = title;
+            this.pages = pages;
+            this.price = function() {
+                return this.pages * 10
+            }
+        }
+
+        let mathBook = new Book();
+        console.log(mathBook);
+        let engbook = new Book('영어의 정석', 100);
+        console.log(engbook);
+        
+    </script>
+</body>
+</html>

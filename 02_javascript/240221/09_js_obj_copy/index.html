@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 복사</title>
+</head>
+<body>
+    <script>
+        /* number, string, boolean 같은 기본(원시) 자료형은 복사 시 같은 저장공간을 공유하는 것이 아니라 새로 만들어 새로 연결한다. */
+        let numA = 100; 
+        let numB = numA; // const는 값을 변경하지 못하게 한다.
+        numB = 200;
+        console.log(numA, numB); // 100, 200
+        console.log('numA == numB', numA == numB); // false
+
+        /* 객체 자료형은 복사 시 같은 저장공간을 공유하기 때문에 뒤에서 바꾸면 앞에 것도 바뀐다. */
+        const objA = {title: "1"};
+        const objB = objA;
+        const objC = Object.assign({}, objA); // 얉은 복사
+        const objD = {...objA}; // 얉은 복사
+
+        objB.title = "2"; // 객체 안의 프로퍼티를 변경하기 때문에 const를 사용해도 된다.
+
+        console.log(objA.title, objB.title, objC.title, objD.title); // 2, 2, 1, 1
+        console.log(objA, objB, objC, objD);
+        console.log('objA == objB', objA == objB); // true
+
+        const arrA = [1,2,3];
+        const arrB = arrA;
+        const arrC = arrA.slice(); // 얉은 복사: 값은 다르나 안의 내용은 똑같다.
+        arrB.push(4); 
+        console.log('arrA == arrB', arrA == arrB); // true
+        console.log('arrA == arrC', arrA == arrC); // false
+
+        /* 얉은 복사, 깊은 복사 - 객체를 복사할 때 필요 */
+
+        /* 깊은 복사 */
+        const obj = {
+            name:'해파리',
+            score:{
+                math: 90,
+                eng: 80,
+            }
+        }
+
+        const obj2 = obj // 객체를 할당할 때 같은 참조를 가리킨다.
+        const objCopy = {...obj}; // 얉은 복사 : 객체를 복사할 떄, 객체는 다른 참조, 속성이 같은 참조를 가리킨다.
+        console.log(obj == objCopy); // false
+        console.log(obj.score == objCopy.score); // true
+
+        const objDeepCopy = JSON.parse(JSON.stringify(obj)); // 깊은 복사 : 모든 것을 다 다르게 복사한다.
+        console.log(obj.score == objDeepCopy.score); // false
+    </script>
+</body>
+</html>
