@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부분 문자열 추출</title>
+</head>
+<body>
+    <h1>Have a nice day!</h1>
+    <script>
+        let title = document.querySelector('h1');
+        
+        /* 부분 문자열 추출 방법 1: substring
+        let title_sub = title.innerText.substring(7, 11);
+        console.log(title_sub); // nice
+
+        let first_letter = title_sub[0].toUpperCase(); // = title_sub.charAt ; title_sub에서 첫번쨰 글자만 추출해 대문자로 바꾼다.
+        let other_letters = title_sub.substring(1); // title_sub에서 첫번쨰 글자를 제외한 나머지 글자를 추출한다.
+        title.innerText = first_letter + other_letters // Nice
+        */
+
+        /* 부분 문자열 추출 방법 2: slice */
+        let title_sub = title.innerText.slice(7, 11);
+        // let title_sub = title.innerText.slice(-9, -5);
+        // let title_sub = title.innerText.slice(7, 11);
+        // let title_sub = title.innerText.slice(-9, 11);
+        console.log(title_sub); // nice
+        let first_letter = title_sub[0].toUpperCase();
+        let other_letters = title_sub.substring(1);
+        title.innerText = first_letter + other_letters + "~" // Nice~
+    </script>
+</body>
+</html>

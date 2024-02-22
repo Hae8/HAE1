@@ -1,0 +1,198 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-rows: 50px 1fr 170px;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 1px 6px #20212447;
+    position: fixed;
+
+    .menu {
+        width: 33vw;
+    }
+
+    .menu>ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        line-height: 50px;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            margin: 0 15px;
+        }
+    }
+
+    .menu-center {
+        text-align: center;
+        width: fit-content;
+    }
+
+    .menu-left {
+        justify-content: flex-start;
+    }
+
+    .menu-right {
+        justify-content: flex-end;
+    }
+}
+
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-areas: ". container .";
+    min-height: 800px;
+}
+
+h1 {
+    font-size: 13pt;
+}
+
+#container {
+    grid-area: container;
+    align-items: center;
+    padding: 50px 0;
+}
+
+table {
+    margin: 10px auto;
+    width: 100%;
+    border-top: 3px solid black;
+
+    tr {
+        border: 1px solid white;
+    }
+
+    th {
+        text-align: right;
+        width: 15%;
+        background-color: rgb(223, 223, 223);
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border-bottom: 1.5px dotted black;
+    }
+
+    .msg {
+        font-size: 9pt;
+        margin: 15px 0;
+
+        .red {
+            font-size: inherit;
+            color: red;
+        }
+    }
+
+    .required::before {
+        content: "*";
+        padding-right: 4px;
+        color: red;
+    }
+
+    input {
+        width: 80px;
+    }
+
+    input[type='checkbox'] {
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 10px;
+    }
+
+    *[id |="user"] {
+        margin: 0 5px;
+    }
+
+    input[id="user-email-addr"] {
+        width: 120px;
+    }
+}
+
+.btn-group {
+    text-align: center;
+    padding: 30px 0;
+}
+
+hr {
+    width: 95%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #818181;
+    margin: 0 4px;
+}
+
+button[class$="black"] {
+    background-color: black;
+    color: white;
+    padding: 2px 10px;
+
+}
+
+button[class$="black"]:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+button[class$="black"]:active {
+    box-shadow: 1px 1px 4px #818181 inset;
+}
+
+button[class$="white"] {
+    background-color: white;
+    color: black;
+    padding: 5px 40px;
+}
+
+button[class$="white"]:hover {
+    background-color: black;
+    color: white;
+}
+
+button[class$="white"]:active {
+    box-shadow: 1px 1px 4px #818181 inset;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #212121;
+    color: #f1f1f1;
+    padding: 30px 200px;
+
+    p:first-child {
+        margin-bottom: 10px;
+    }
+
+    p:nth-child(n+2) {
+        line-height: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+}

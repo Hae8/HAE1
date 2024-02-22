@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열</title>
+</head>
+<body>
+    <script>
+        let str = "프론트엔드 개발자 취업캠프";
+        // 문자열의 길이
+        let str_len = str.length;
+        console.log(str_len); // 14
+
+        // 특정 위치 문자에 접근하기
+        // 1]
+        let str_third = str.charAt(3);
+        console.log(str_third); // 엔
+        //2]
+        let str_second = str[2];
+        console.log(str_second); // 트
+
+        // 문자열 str에서 문자ch 개수 확인하기
+        function findCount(str, ch){
+            let count = 0;
+            for(let i=0; i < str.length; i++) { // for, i라는 변수에 위치정보(index)가.. 0 ~ 14까지 마지막 불포함)
+                if (str[i] === ch) { // 만약, 위치에 ch와 같은 것이 있다면,
+                    count++; // count가 1 증가
+                } 
+            } return count; //count를 반환
+        }
+
+        let findResult = findCount(str, '프');
+        console.log(findResult); // 2
+
+        /* 프롬포트로 사용자 입력받기
+        let str_input = prompt('문자열을 입력하세요');
+        let ch_input = prompt('찾을 문자를 입력하세요')
+
+        console.log('입력된 문자열: ', str_input);
+        console.log('입력된 문자: ', ch_input);
+        console.log((findCount(str_input,ch_input)));
+        */
+
+        let str_greeting = "Good morning, everyone. Beautiful morning.";
+        let str_indexOf = str_greeting.indexOf("morning");
+        console.log(str_indexOf); // 5
+        let str_second_indexOf = str_greeting.indexOf("morning", str_indexOf + 1);
+        console.log(str_second_indexOf); // 34
+
+        // 문자열 str에서 문자열 target이 몇 개 존재하는지 반환
+        function findCountStr(str, target) {
+            let count = 0;
+            // str.indexOf(target); // 5 => count = 1
+            // str.indexOf(target, 5+1); //34 => count = 2
+            // str.indexOf(target, 34 +1); // -1 ... 종료
+            let position = str.indexOf(target);
+            while (position != -1){
+                count++;
+                position = str.indexOf(target, position + target.length); // target.length 더해주기
+            }
+            return count;
+        }
+
+        let lyrics = '어두컴컴한 밤이라 문자로 콕콕콕콕콕콕 찍어서 보낸다'
+        console.log(findCountStr(lyrics, '콕콕콕')); // 2
+
+        // 문자열 str에서 문자열 target이 존재하는 n번째 위치를 반환
+        function findTargetIndex(str, target, n) {
+            let count = 0;
+            let position = str.indexOf(target);
+            while (position != -1) {
+                count++; 
+                if (count == n) {
+                    return position;
+                }
+                position = str.indexOf(target, position + target.length);
+            }
+            return -1; // 찾지 못한 경우
+        }
+        let answer = findTargetIndex("Good morning, everyone. Beautiful morning.", "morning", 2);
+        console.log(answer); // 2
+
+        // // recursive 👍👍👍
+        // function findTargetIndex2(str, target, n) {
+        //     if (n == 1) return str.indexOf(target);
+        //     return str.indexOf(target, findTargetIndex2(str, target, n - 1) + target.length);
+        // }
+        // console.log(findTargetIndex2(str_greeting, 'morning', 2));
+
+        // 앞의 문자 찾기
+        let url_addr = 'https://naver.com';
+
+        function url_chk(str) {
+            if (!str.startsWith('http://') && !str.startsWith('https://')) {
+                console.log('url 주소는 http:// 또는 https:// 로 시작해야 합니다.');
+            }
+        }
+        url_chk(url_addr);
+
+        // 앞 뒤 공백 제거하기
+        let space_str = " Good morning.  ";
+        console.log(space_str.trim(), space_str.trim().length); // Good morning. 13
+        console.log(space_str.trimStart(), space_str.trimStart().length); // Good morning.   15
+        console.log(space_str.trimEnd(), space_str.trimEnd().length); //  Good morning. 14
+
+        // 대소문자 바꾸기
+        let msg = "Good Morning.";
+        console.log(msg.toUpperCase()); // GOOD MORNING.
+        console.log(msg.toLowerCase()); // good morning.
+
+        // method chaining: 메서드는 . 으로 계속 연결하여 쓸 수 있다. 
+    </script>
+</body>
+</html>

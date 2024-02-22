@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열2</title>
+</head>
+<body>
+    <script>
+        let salad = ['양상추', '버섯', '샐러리', '토마토']
+        let meat = ['양고기', '소고기', '돼지고기', '닭고기']
+
+        /* 배열 합치기[1] : concat : 이어붙이기 - 기존 배열에 또 다른 배열이나 값을 합쳐서 새로운 배열을 만든다.
+        let food = salad.concat(meat);
+        console.log(food); // ['양상추', '버섯', '샐러리', '토마토', '양고기', '소고기', '돼지고기', '닭고기']
+        food = food.concat('계란');
+        console.log(food); // ['양상추', '버섯', '샐러리', '토마토', '양고기', '소고기', '돼지고기', '닭고기', '계란']
+        
+    
+        let food = salad.concat('계란', meat, ['한식', '중식', '일식'])
+        console.log(food); // ['양상추', '버섯', '샐러리', '토마토', '계란', '양고기', '소고기', '돼지고기', '닭고기', '한식', '중식', '일식']
+        */
+        
+        /* 배열 합치기[2] : 전개 연산자 */
+        let food = [...salad, '계란', ...meat];
+        console.log(food); //['양상추', '버섯', '샐러리', '토마토', '계란', '양고기', '소고기', '돼지고기', '닭고기']
+
+        // 배열 역순 정렬
+        let animalRank = ['강아지', '고양이', '토끼', '새', '뱀'];
+        animalRank.reverse();
+        console.log(animalRank); // ['뱀', '새', '토끼', '고양이', '강아지'] // 원본인 animalRank 도 바뀐다. 
+
+        // 배열 사전식 정렬
+        animalRank.sort();
+        console.log(animalRank); // ['강아지', '고양이', '뱀', '새', '토끼'] // 원본인 animalRank 도 바뀐다.
+    
+        // 배열 글자 길이 순 정렬
+        animalRank.sort((a,b) => {
+            return a.length - b.length;
+        })
+        console.log(animalRank); // ['뱀', '새', '토끼', '강아지', '고양이']
+
+        // 배열 숫자 크기 순 정렬
+        let values = [5, 20, 30, 4, 11, 15]
+        values.sort(function(a,b){
+            if (a > b) return 1;
+            if (a < b) return -1;
+            if (a === b) return 0;
+        });
+        console.log(values); // [4, 5, 11, 15, 20, 30]
+
+        /* 위와 같다.
+        values.sort((a,b) => {
+            return a - b;
+        });
+        console.log(values); //[4, 5, 11, 15, 20, 30]
+        */
+    </script>
+</body>
+</html>

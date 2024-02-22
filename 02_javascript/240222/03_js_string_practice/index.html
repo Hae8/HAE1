@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 주소 감추기</title>
+</head>
+<body>
+    <div id = "userInput">
+        <label>
+            이메일
+            <input type="email" id="userEmail" name="userInput" placeholder="이메일 주소를 입력하세요." autofocus />
+        </label>
+        <button>가리기</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        /*
+        사용자가 이메일 주소를 적고, 가리기 버튼을 누르면
+        good_morning0123@gmail.com
+        good_morning0***@gmail.com => 뒤의 3글자가 가려지고 resultDiv에 출력된다.
+        */
+
+        let btn = document.querySelector('button') // 1. 버튼 요소 가져오기
+        btn.addEventListener('click', () => emailMasking()) // 2. 버튼을 눌렀을 때 동작
+        // console.log(inputEmail);
+        
+        function emailMasking (){
+            let inputEmail = document.querySelector('#userEmail').value; // 3. 이메일 주소 가져오기
+            let splitAccout = inputEmail.split("@")[0]; // 4. @를 이용해 쪼개기
+            let splitDomain = inputEmail.split("@")[1];
+            let MastAccount = splitAccout.slice(0, -3) + "***" // 5. userId에서 부분문자열 추출 뒤에서 세개 뺀거 + ***
+            document.querySelector('#result').innerText = MastAccount + "@" + splitDomain // 6. @, 도메인 포함 연결, 7. resultDiv 가져와서, innerText
+        }
+    </script>
+</body>
+</html>
