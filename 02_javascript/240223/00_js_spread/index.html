@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전개(spread)</title>
+</head>
+<body>
+
+    <script>
+        // 전개 구문으로 작성된 매개변수는 배열로 가져온다.
+        function addNum (...numbers) {
+            let total = 0;
+
+            for (let i=0; i<numbers.length; i++){
+                total += numbers[i];
+            }
+            return total;
+        };
+    
+        console.log(addNum(1,2,3,4,5,6)); // 21
+        console.log(addNum(1)); // 1
+        
+        //log
+        function log (...msg) {
+            for (let i of msg){
+                console.log(i);
+                /*
+                1;
+                ['a', 'b', 'c'];
+                안녕;
+                true
+                */
+            }
+        }
+
+        log(1, ['a', 'b', 'c'],"안녕", true)
+    </script>
+</body>
+</html>

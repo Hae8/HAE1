@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예외 던지기</title>
+</head>
+<body>
+    <script>
+        let json = '{ "name": "해파리", "age" : 20}';
+            // console.log(user.score); //undefined
+        try {
+            let user = JSON.parse(json);
+            if(!user.score){
+                // throw "사용자 점수가 없습니다."
+                throw new Error("사용자 점수가 없습니다.")
+            }
+        } catch(e) {
+            console.error(e.name);
+        }
+    </script>
+</body>
+</html>

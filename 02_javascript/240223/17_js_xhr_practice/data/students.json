@@ -1,0 +1,27 @@
+[
+    {
+        "name" : "김민수",
+        "gender" : "남자",
+        "address" : "서울시 중랑구"
+    },
+    {
+        "name" : "이민지",
+        "gender" : "여자",
+        "address" : "서울시 성북구"
+    },
+    {
+        "name" : "박수지",
+        "gender" : "여자",
+        "address" : "서울시 마포구"
+    },
+    {
+        "name" : "최민호",
+        "gender" : "남자",
+        "address" : "서울시 동대문구"
+    },
+    {
+        "name" : "권유진",
+        "gender" : "여자",
+        "address" : "서울시 용산구"
+    }
+]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예외처리</title>
+</head>
+<body>
+    <script>
+        try{ // 1. 에러가 날 것 같은 부분을 묶는다.
+        console.log('시작');
+        add(); // 에러가 나면 프로그램 실행이 멈춘다.
+        console.log('실행 중');
+        } catch(e) { // 2. 에러를 잡아서 변수 e에 담는다.
+            console.error(e); // ReferenceError: add is not defined
+            console.error(e. name); // ReferenceError
+            console.error(e. message); // add is not defined
+        } finally{
+        console.log('끝'); // 3. 에러 여부와 상관없이 프로그램이 마저 실행된다.
+        }
+    </script>
+</body>
+</html>
