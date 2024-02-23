@@ -1,0 +1,76 @@
+>>> a=5; b=3
+>>> print(a+b,a-b,a*b,a/b,a//b,a%b,a**b)
+8 2 15 1.6666666666666667 1 2 125
+>>> a,b=5,3
+>>> print(a+b,a-b,a*b,a/b,a//b,a%b,a**b)
+8 2 15 1.6666666666666667 1 2 125
+>>> a,b,c=2,3,4
+>>> print(a+b-c, a+b*c, a*b/c)
+1 14 1.5
+>>> print((a+b)-c)
+1
+>>> print(a+(b-c))
+1
+>>> print((a+b)*c)
+20
+>>> print(a+(b*c))
+14
+>>> s1,s2,s3="100","100.123","9999999999999999999999999999"
+>>> print(int(s1)+1,float(s2)+1,int(s3)+1)
+101 101.123 10000000000000000000000000000
+>>> a=100; b=100.123
+>>> str(a)+'1';str(b)+'1'
+'1001'
+'100.1231'
+>>> print(str(a)+'1', str(b)+'1')
+1001 100.1231
+>>> a=10
+>>> a+=5; print(a)
+15
+>>> a-=5; print(a)
+10
+>>> a*=5; print(a)
+50
+>>> a/=5; print(a)
+10.0
+>>> a//=5; print(a)
+2.0
+>>> a%=5; print(a)
+2.0
+>>> a**=5; print(a)
+32.0
+>>> d=2j
+>>> print(type(d))
+<class 'complex'>
+>>> print(d,d.real,d.imag,d.conjugate(),type(d))
+2j 0.0 2.0 -2j <class 'complex'>
+>>> g=0b1011101
+>>> print(type(g))
+<class 'int'>
+>>> str1 = "hello"
+>>> str2 = "groom: !@#$%"
+>>> str3 = '134.24'
+>>> 
+>>> print(str1,str2,str3)
+hello groom: !@#$% 134.24
+>>> print (type(str1),type(str2), type(str3))
+<class 'str'> <class 'str'> <class 'str'>
+>>> a, b = 100,200
+>>> print(a==b, a!=b, a>b, a<b, a>=b, a<=b)
+False True False True False True
+>>> a=99
+>>> (a>100) and (a<200)
+False
+>>> (a>100) or (a<200)
+True
+>>> not(a==100)
+True
+>>> if(1234) : print("참이면 보여요")
+
+참이면 보여요
+>>> if(0) : print("거짓이면 안 보여요")
+
+>>> print(2+2-2*2/2*2)
+0.0
+>>> print(2-2+2/2*2+2)
+4.0
