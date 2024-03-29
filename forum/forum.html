@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forum</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <div class="body_inner_wrapper">
+    <header>
+        <div class = "header_inner_wrap">
+            <nav class="menu">
+                <ul class="menu-left">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            
+            <div class="menu-center">
+                <img src="./logo.png" alt="로고_이미지">
+            </div>
+
+                <ul class="menu-right">
+                    <li><a href="#">login</a></li>
+                    <li><a href="#">join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>ㅇ VENTUS ㅇ</h1>
+        <div class = "main_inner_wrap">
+            <div class = "user_reg">
+                <form action="" method="get">
+                    <table>
+                    <thead>
+                        <caption>사용자 등록</caption>
+                        <tr> 
+                            <th><label for="user_id">아이디</label></th>
+                            <td colspan="2"><input type="text" id="user_id" name="id" required></td>
+                        </tr>
+                        <tr> 
+                            <th><label for="user_name">이름</label></th>
+                            <td colspan="2"><input type="text" id="user_name" name="name" required></td>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr> 
+                            <th>성별</th>
+                            <td class="user_gender_male">
+                                <label for="user_gender_male">남자</label>
+                                <input type="radio" name="gender" id="user_gender_male" value="1" checked/>
+                            </td>
+                            
+                            <td class="user_gender_female">
+                                <label for="user_gender_female">여자</label>
+                                <input type="radio" name="gender" id="user_gender_female" value="2">
+                            </td>
+                        </tr>
+                            <th><label for="user_pwd">비밀번호</label></th>
+                            <td colspan="2"><input type="password" id="user_pwd" name="pwd"></td>
+                        <tr> 
+                            <th><label for="user_tel">전화번호</label></th>
+                            <td colspan="2"><input type="int" id="user_tel" name="tel"></td>
+                        </tr>
+                        <tr> 
+                            <th><label for="user_email">이메일</label></th>
+                            <td colspan="2"><input type="email" id="user_email" name="email"></td>
+                        </tr>
+                        <tr> 
+                            <th><label for="user_nation">국가</label></th>
+                            <td colspan="2">
+                                <select name="nation" id="user_nation">
+                                    <option selected disabled>=== 국가를 선택하세요 ===</option>
+                                    <option value="korea">대한민국</option>
+                                    <option value="usa">미국</option>
+                                    <option value="japan">일본</option>
+                                    <option value="china">중국</option>
+                                </select>
+            </datalist>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th><label for="user_image">프로필 이미지</label></th>
+                            <td colspan="2"><input type="file" name="image" id="user_image" accept="image/*,.pdf" multiple/></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"><button type="submit">등록</button></td>
+                        </tr>
+                    </tfoot>
+                    </table>
+                </form>
+            </div>
+
+            <div class = "post_reg">
+                <form action="" method="get">
+                    <table class = "post_reg_table" >
+                        <caption>게시글 등록</caption>
+                        <tbody>
+                            <tr> 
+                                <th><label for="text_user_id">작성자 아이디</label></th>
+                                <td><textarea name="text_user_id" id="text_user_id"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th><label for="text_write">글 내용</label></th>
+                                <td><textarea name="text_write" id="text_write"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th><label for="text_hashtag">해시태그</label></th>
+                                <td><textarea name="text_hashtag" id="text_hashtag"></textarea></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><button type="submit">등록</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+
+            <div class = "user_info">
+                <table class = "user_info_table">
+                    <tr>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>성별</th>
+                        <th>전화번호</th>
+                        <th>이메일</th>
+                        <th>국가</th>
+                        <th>프로필 이미지</th>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class = "board">
+                <table class = "board_table">
+                    <colgroup>  
+                        <col style="width: 7%;">
+                        <col style="width: 50%;">   
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                        <col style="width: 7%;">
+                        <col style="width: 12%;">
+                    </colgroup>
+                    <tr>
+                        <th>글 번호</th>
+                        <th>내용</th>
+                        <th>작성자 아이디</th>
+                        <th>작성자 이름</th>
+                        <th>수정, 삭제</th>
+                        <th>해시태그</th>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repellendus corrupti asperiores libero odio, natus ipsa possimus error fugit, assumenda sed debitis blanditiis, earum officia magni recusandae consequuntur accusamus similique.</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi eos consequuntur fugiat odio animi iure nobis maiores ea reiciendis et odit a in eum, assumenda recusandae deleniti suscipit veniam officia?</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                    <tr>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class = "footer_inner_wrap">
+            <p>
+                상호: ㅇㅇㅇ | 대표: ㅇㅇㅇ | 개인정보관리책임자: ㅇㅇㅇ |
+                전화: <a href="tel:00000000000">000-0000-0000</a> |
+                이메일 : <a href="mailto:master@example.com">master@example.com</a>
+                <br />
+                주소: ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ | 사업자등록번호: 000-00-00000 |
+            </p>
+            <p>
+                <a href="#">사업자정보확인</a> | <a href="#">홈페이지 이용약관</a> | <a href="#">개인정보처리방침</a>
+                <br />
+                © copyright 2024 PARK sohee.
+            </p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
