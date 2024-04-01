@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        /*
+        fetch('https://koreanjson.com/users/')
+            .then((res) => {
+                return res.json();
+            }) // fetch를 사용할 때는 json()으로 변환을 거쳐야 한다.
+            .then((data) => {
+                console.log(data);
+            })
+        */
+
+        /*
+        axios.get('https://koreanjson.com/users/')
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.error(err.message);
+        })
+        // axios를 사용하면 조금 더 안정적인 사용이 가능하다.
+        */
+
+        /*
+        (async() => {
+            try {
+                const res = await axios.get('https://koreanjson.com/users/')
+                console.log(res.data);
+            } catch (err) {
+                console.error(err);
+            }
+        }) ();
+        // 익명함수와 async를 이용해서 작성할 수 있다.
+        */
+
+        (async() => {
+            try {
+                const res = await axios.post('https://koreanjson.com/users/', {
+                    "name": "이주희",
+                    "username": "jh1122",
+                    "email": "lee.jh@gmail.com",
+                    "phone": "010-1234-5678",
+                    "website": "https://leejuhee.com",
+                    "province": "",
+                    "city": "서울특별시",
+                    "district": "성북구",
+                    "street": "성북로 123",
+                    "zipcode": "02879",
+                })
+                console.log(res.data);
+            } catch (err) {
+                console.error(err);
+            }
+        }) ();
+        // post 방식에서는 쓰여진 객체를 clg에 넣어서 출력해준다.
+    </script>
+</body>
+</html>

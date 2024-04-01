@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="peopleName" placeholder="영화인을 입력하세요" />
+    <button id="searchBtn">검색</button>
+
+    <div id="result"></div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const result = document.querySelector('#result')
+        const url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/people/searchPeopleList.json'
+        const key = '891e7ba1070bab7c910c59db6b8e72c9';
+
+        document.querySelector('#searchBtn').addEventListener('click', () => {
+            const peopleName = document.querySelector('#peopleName').value;
+            axios.get(`${url}?key=${key}&peopleNm=${encodeURIComponent(peopleName)}`)
+                .then((res) => {
+                    const peopleList = res.data.peopleListResult.peopleList;
+                    result.innerHTML = peopleList.map((people) => {
+                        return `<div>${people.peopleNm} : ${people.filmoNames}</div>`
+                    }).join('');
+                })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="name" placeholder="이름">
+        <input type="text" name="username" placeholder="아이디">
+        <input type="email" name="email" placeholder="이메일">
+        <input type="tel" name="phone" placeholder="전화번호">
+        <input type="url" name="website" placeholder="웹사이트">
+        <input type="text" name="province" placeholder="도">
+        <input type="text" name="city" placeholder="시">
+        <input type="text" name="district" placeholder="구">
+        <input type="text" name="street" placeholder="번지">
+        <input type="text" name="zipcode" placeholder="우편번호">
+        <button type="submit">전송</button>
+    </form>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = form.name.value;
+            const username = form.username.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const website = form.website.value;
+            const province = form.province.value;
+            const city = form.city.value;
+            const district = form.district.value;
+            const street = form.street.value;
+            const zipcode = form.zipcode.value;
+
+            /*
+            axios.post('https://koreanjson.com/users/', {
+                name,
+                username,
+                email,
+                phone,
+                website,
+                province,
+                city,
+                district,
+                street,
+                zipcode,
+            }).then((res)=> {
+                console.log(res.data);
+            }).catch((err)=> {
+                console.error(err);
+            });
+            */
+
+            // await 사용
+            try {
+                const res = await axios.post('https://koreanjson.com/users/', {
+                    name,
+                    username,
+                    email,
+                    phone,
+                    website,
+                    province,
+                    city,
+                    district,
+                    street,
+                    zipcode,
+                });
+                console.log(res.data);
+            } catch (err) {
+                console.error(err)
+            } finally {
+                e.target.reset();
+            }
+        });
+    </script>
+</body>
+</html>
