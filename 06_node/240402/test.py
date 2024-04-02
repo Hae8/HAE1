@@ -1,0 +1,2 @@
+name = 'jellyfish'
+print(name)
