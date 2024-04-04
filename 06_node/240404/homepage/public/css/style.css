@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'omyu_pretty';
+}
+
+.join-info, .user-write {
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: lightblue;
+}
+
+.container{
+    max-width: 400px;
+    min-width: 400px;
+    height: 650px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.container p{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form{
+    margin-top: 30px;
+}
+
+.container .input-box{
+    width: 100%;
+    margin-top: 20px ;
+}
+
+.form .input-box input, select{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.input-box input:focus{
+    border-color:lightblue;
+}
+
+.input-box select:focus{
+    border-color: lightblue;
+}
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+
+
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: lightblue;
+    transition: all 0.2s ease;
+}
+
+.form button:hover{
+    background-color: lightblue;
+}
+
+.join-right, .write-right{
+    margin-left: 40px;
+    max-width: 700px;
+    min-width: 700px;
+}
+
+.container textarea{
+    width: 100%;
+    resize: none;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.container textarea:focus{
+    border-color: lightblue;
+}
+
+.filebox{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.filebox span{
+    font-size: 20px;
+}
+
+.filebox label { 
+    display: inline-block; 
+    padding: .5em .75em;
+    color: #999;
+    font-size:inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer; 
+    border: 1px solid #ebebeb;
+    border-bottom-color: #e2e2e2;
+    border-radius: .25em;
+}
+
+.filebox input[type="file"] {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0); 
+    border: 0;
+}
+
+.user-info, .write-info{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-info span{
+    margin: 20px;
+}
+
+.write-info span{
+    margin: 30px;
+}
+
+.write-content p{
+    text-align: left;
+    margin-left: 42px;
+    font-size: 20px;
+}
+
+.write-info, .user-info{
+    border: 1px solid lightblue;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: left;
+}
+
+.write-info{
+    margin-bottom: 10px;
+}
+
+.write-info span:nth-child(2){
+    margin-right: 170px;
+}
+
+.user-info span:nth-child(3){
+    margin-right: 0px;
+}
+
+.user-info span:nth-child(5){
+    margin-right: 60px;
+}

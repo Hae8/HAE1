@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에러</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #page-layout {
+            max-width: 620px;
+            padding: 0 64px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #error {
+            margin: 8px auto;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 140%;
+        }
+        #error-message {
+            margin: 8px auto;
+            font-size: 15px;
+            font-weight: 400;
+            color: rgb(153, 153, 153);
+            line-height: 140%;
+        }
+        #back-btn {
+            margin: 8px auto;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            height: 34px;
+            padding: 0 16px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-layout">
+        <span id="error">{{code}}</span>
+        <span id="error-message">{{message}}</span>
+        <div>
+            <a id="back-btn" href="/">
+                돌아가기
+            </a>
+        </div>
+    </div>
+</body>
+</html>
