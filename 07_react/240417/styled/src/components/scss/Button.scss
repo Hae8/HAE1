@@ -1,0 +1,76 @@
+$blue: #6a9bc4;
+$pink: #f78989;
+$grey: #f1f1f1;
+
+@mixin button-color($color) {
+    background-color: $color;
+        &:hover {
+            background-color: lighten($color, 10%);
+        }
+        &:active {
+            background-color: darken($color, 10%);
+        }
+        &.outline {
+            color: $color;
+            background-color: transparent;
+            border: 2px solid $color;
+            &:hover {
+                background-color: $color;
+                color: white;
+            }
+            &:active {
+                background-color: darken($color, 10%);
+            }
+        }
+}
+
+.Button {
+    display: inline-flex;
+    align-items: center;
+    
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    color: $grey;
+
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.25rem;
+    padding: 0 1rem;
+
+    &.large{
+        height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    &.medium{
+        height: 2.25rem;
+        font-size: 1rem;
+    }
+
+    &.small{
+        height: 1.75rem;
+        font-size: 0.75rem;
+    }
+
+    & + &{ // 버튼끼리 인접하면
+        margin-left: 1rem;
+    }
+
+    &.fullWidth {
+        width: 100%;
+        justify-content: center;
+        margin: 1rem 0 0 0;
+    }
+
+    &.blue {
+        @include button-color($blue)
+    }
+
+    &.pink {
+        @include button-color($pink)
+    }
+    
+}

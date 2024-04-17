@@ -1,0 +1,30 @@
+.CheckBox{
+    display: flex;
+}
+
+.CheckBox label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.CheckBox input {
+    display: none;
+}
+
+.CheckBox span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: whitesmoke;
+}
+
+.checked {
+    color: lightgreen;
+}

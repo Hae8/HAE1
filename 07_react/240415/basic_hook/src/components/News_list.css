@@ -1,0 +1,31 @@
+.news_list {
+    margin: 0 auto;
+    width: 768px;
+}
+
+.news_item {
+    display: flex;
+    & + & {
+        margin-top: 10px;
+    }
+}
+
+.thumbnail {
+    margin-right: 1rem;
+    img {
+        display: block;
+        width: 160px;
+        height: 100px;
+    }
+}
+
+.contents {
+    h2 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+        line-height: 150%;
+        white-space: normal;
+    }
+}

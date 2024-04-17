@@ -1,0 +1,27 @@
+.Btn {
+    font-weight: 400;
+    margin: 20px;
+    padding: 1rem 2rem;
+    width: 160px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.Btn-light{
+    &:hover {
+        box-shadow: 0 0 8px 0 white inset;
+    }
+    color: white;
+    background-color: #000066;
+}
+
+.Btn-dark{
+    &:hover {
+        box-shadow: 0 0 8px 0 black inset;
+    }
+    color: black;
+    background-color: whitesmoke;
+}
