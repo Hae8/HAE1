@@ -1,0 +1,139 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "silica@gmail.com",
+      "nickname": "실리카겔",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "email": "saesonyeon@kakao.com",
+      "nickname": "새소년",
+      "password": "1234"
+    },
+    {
+      "id": "3",
+      "email": "lucy@naver.com",
+      "nickname": "루시",
+      "password": "1234"
+    },
+    {
+      "id": "fc50",
+      "email": "nell@gmail.com",
+      "nickname": "넬",
+      "password": "1234"
+    },
+    {
+      "id": "8126",
+      "email": "yun@naver.com",
+      "nickname": "윤도현밴드",
+      "password": "1234"
+    },
+    {
+      "id": "da0a",
+      "email": "buhwal@kakao.com",
+      "nickname": "부활",
+      "password": "1234"
+    },
+    {
+      "id": "eb57",
+      "email": "jaurim@gmail.com",
+      "nickname": "자우림",
+      "password": "1234"
+    },
+    {
+      "id": "6ac6",
+      "email": "lightandsalt@gmail.com",
+      "nickname": "빛과소금",
+      "password": "1234"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "content": "실리카겔입니다.",
+      "like": 0,
+      "img": "",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "content": "새소년입니다.",
+      "like": 0,
+      "img": "",
+      "userId": 2
+    },
+    {
+      "id": "3",
+      "content": "루시입니다.",
+      "like": 0,
+      "img": "",
+      "userId": 3
+    },
+    {
+      "id": "4",
+      "content": "APEX 많관부",
+      "like": 0,
+      "img": "",
+      "userId": 1
+    },
+    {
+      "id": "5",
+      "content": "TIK TAK TOK 많관부",
+      "like": 0,
+      "img": "",
+      "userId": 1
+    },
+    {
+      "id": "6",
+      "content": "난춘 많관부",
+      "like": 0,
+      "img": "",
+      "userId": 2
+    },
+    {
+      "id": "7",
+      "content": "개화 많관부",
+      "like": 0,
+      "img": "",
+      "userId": 3
+    },
+    {
+      "id": "8",
+      "content": "jogging 많관부",
+      "like": 0,
+      "img": "",
+      "userId": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "content": "실리카겔 안녕11",
+      "postId": "1",
+      "userId": 2,
+      "public": false,
+      "password": "1234",
+      "img":""
+    },
+    {
+      "id": "2",
+      "content": "실리카겔 안녕22",
+      "postId": "1",
+      "userId": 3,
+      "public": true,
+      "password": "1234",
+      "img":""
+    },
+    {
+      "id": "3",
+      "content": "새소년 안녕",
+      "postId": "2",
+      "userId": 3,
+      "public": true,
+      "password": "1234",
+      "img": "/img/ha2.png"
+    }
+  ]
+}
